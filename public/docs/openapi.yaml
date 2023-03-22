@@ -1,7 +1,7 @@
 openapi: 3.0.3
 info:
-  title: Laravel
-  description: ''
+  title: 'Books API'
+  description: 'Start (and never finish) side projects with this API.'
   version: 1.0.0
 servers:
   -
@@ -117,6 +117,36 @@ paths:
       tags:
         - Endpoints
       security: []
+  /api/login:
+    post:
+      summary: ''
+      operationId: postApiLogin
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
 tags:
   -
     name: Endpoints

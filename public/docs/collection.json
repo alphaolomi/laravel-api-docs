@@ -9,9 +9,9 @@
         }
     ],
     "info": {
-        "name": "Laravel",
-        "_postman_id": "59a940a0-575e-4ece-b84b-b996a8b8d749",
-        "description": "",
+        "name": "Books API",
+        "_postman_id": "74b1efe0-2ffc-43fd-8879-7cdbf29aeb3c",
+        "description": "Start (and never finish) side projects with this API.",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
     "item": [
@@ -127,6 +127,31 @@
                             "name": ""
                         }
                     ]
+                },
+                {
+                    "name": "POST api\/login",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/login",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": []
                 }
             ]
         }
