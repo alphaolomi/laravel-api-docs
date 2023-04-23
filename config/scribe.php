@@ -4,25 +4,17 @@ use Knuckles\Scribe\Extracting\Strategies;
 
 return [
 
-    'theme' => 'default',
+    'theme' => 'elements',
 
     /*
      * The HTML <title> for the generated documentation. If this is empty, Scribe will infer it from config('app.name').
      */
-    'title' => null,
+    'title' => 'Products API',
 
     /*
      * A short description of your API. Will be included in the docs webpage, Postman collection and OpenAPI spec.
      */
-    'description' => 'Start (and never finish) side projects with this API.',
-  'intro_text' => <<<INTRO
-This documentation will provide all the information you need to work with our API.
-
-<aside>
-As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
-You can switch the language used with the tabs at the top right (or from the nav menu at the top left on mobile).
-</aside>
-INTRO,
+    'description' => 'This is a sample API for a products catalog.',
 
     /*
      * The base URL displayed in the docs. If this is empty, Scribe will use the value of config('app.url').
@@ -243,7 +235,7 @@ INTRO,
          * This will NOT be included in the generated documentation.
          * If this value is empty, Scribe will use a random value.
          */
-        'use_value' => env('SCRIBE_ACCESS_TOKEN'),
+        'use_value' => env('SCRIBE_AUTH_KEY'),
 
         /*
          * Placeholder your users will see for the auth parameter in the example requests.
@@ -352,7 +344,7 @@ INTRO
      * - 'logo' => 'img/logo.png' // for `laravel` type
      *
      */
-    'logo' => false,
+    'logo' => '../logo.png',
 
     /**
      * Customize the "Last updated" value displayed in the docs by specifying tokens and formats.

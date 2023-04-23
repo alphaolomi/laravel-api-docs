@@ -10,7 +10,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/health-check', [App\Http\Controllers\HealthController::class, '__invoke']);
     Route::post('/logout', [App\Http\Controllers\AuthController::class, 'logout']);
 
-    Route::apiResource('posts', App\Http\Controllers\PostController::class);
+    Route::apiResource('products', App\Http\Controllers\ProductController::class);
 
     Route::get('/collection', [App\Http\Controllers\CollectionController::class, '__invoke']);
 });
