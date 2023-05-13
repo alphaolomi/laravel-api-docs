@@ -35,7 +35,6 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use HasFactory;
-    use HasUlids;
 
     protected $fillable = [
         'name',
@@ -47,7 +46,19 @@ class Product extends Model
 
     protected $casts = [
         'is_active' => 'boolean',
-        // cast money as decimal using the currency defined in the package config
         'price' => MoneyDecimalCast::class,
     ];
+
+    /**
+     * @var array<int, string>
+     */
+    protected $hidden = [
+        'is_active',
+    ];
+
+    // scope to only return active products
+    public function scopeActive($query)
+    {
+        return $query->where('is_active', true);
+    }
 }
