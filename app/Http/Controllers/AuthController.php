@@ -2,15 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\RegisterRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Hash;
-use Knuckles\Scribe\Attributes\Group;
-use Knuckles\Scribe\Attributes\Unauthenticated;
-use Knuckles\Scribe\Attributes\BodyParam;
-use Knuckles\Scribe\Attributes\Endpoint;
-use Knuckles\Scribe\Attributes\Response;
-
+use Knuckles\Scribe\Attributes\{Group, Unauthenticated, BodyParam, Endpoint};
 
 #[Group("Authentication", "APIs for authentication")]
 class AuthController extends Controller
@@ -21,11 +18,7 @@ class AuthController extends Controller
     #[BodyParam("password", "string", "The password of the user.", example: "password")]
     #[Response([
         "token" => "1|0M0VCKSJam4zQU058p3ZJ4GXCiDCWYkCyJflPegA",
-        "user" => [
-            "id" => 1,
-            "name" => "John Doe",
-            "email" => "johndoe@example.com",
-        ]
+        "user" => ["id" => 1, "name" => "John Doe", "email" => "johndoe@example.com"]
     ])]
     public function login(Request $request)
     {
@@ -39,24 +32,53 @@ class AuthController extends Controller
 
         // Check password
         if (!$user || !Hash::check($fields['password'], $user->password)) {
-            return response([
-                'message' => 'Bad credentials'
-            ], 401);
+            return response(['message' => 'Bad credentials'], Response::HTTP_UNAUTHORIZED);
         }
 
-        /** @var \Laravel\Sanctum\NewAccessToken */
-        $token = $user->createToken($request->ip());
+        $deviceId = $request->ip() . '-' . hash('md5', $request->header('User-Agent'));
 
-        return response()->json([
-            'token' => $token->plainTextToken,
+        /** @var \Laravel\Sanctum\NewAccessToken */
+        $token = $user->createToken($deviceId);
+
+        $content = [
+            'access_token' => $token->plainTextToken,
             'user' => $user
+        ];
+
+        return response()->json($content, Response::HTTP_OK);
+    }
+
+    #[Endpoint("Register a user")]
+    #[Unauthenticated]
+    #[BodyParam("name", "string", "The name of the user.", example: "John Doe")]
+    #[BodyParam("email", "string", "The Email of the user.", example: "user@example.com")]
+    #[BodyParam("password", "string", "The password of the user.", example: "password")]
+    public function register(RegisterRequest $request)
+    {
+        $fields = $request->validated();
+        logger($fields);
+
+        $user = User::create([
+            'name' => $fields['name'],
+            'email' => $fields['email'],
+            'password' => bcrypt($fields['password']),
         ]);
+
+        $deviceId = $request->ip() . '-' . hash('md5', $request->header('User-Agent'));
+        $token = $user->createToken($deviceId);
+
+        $content = [
+            'access_token' => $token->plainTextToken,
+            'user' => $user,
+        ];
+
+        return response()->json($content, 201);
     }
 
     #[Endpoint("Logout the user")]
     public function logout(Request $request)
     {
         $request->user()->currentAccessToken()->delete();
-        return response()->json(['message' => 'Logged out']);
+        return response()->noContent();
     }
 }
