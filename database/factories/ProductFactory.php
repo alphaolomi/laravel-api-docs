@@ -19,7 +19,7 @@ class ProductFactory extends Factory
             'description' => $this->faker->paragraph(4),
             'price' => $this->faker->randomFloat(2, 10000, 300000),
             'is_active' => $this->faker->boolean(80),
-            // 'cover_image' => $this->faker->imageUrl(640, 480, 'cats', true, 'Faker'),
+            'cover_image' => $this->faker->imageUrl(640, 480, 'products', false, 'Shopify'),
         ];
     }
 }
