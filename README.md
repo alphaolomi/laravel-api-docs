@@ -3,10 +3,10 @@
 ![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/alphaolomi/laravel-api-docs/run-tests?label=tests)
 
 > This project demonstrates how to build a Laravel API with API documentation using Scribe.
-> It serves as a backend for a simple Ecommerce sites like [Shop App](#).
+> It serves as a backend for a simple Ecommerce sites like [Shop App](https://github.com/alphaolomi/shop-app).
 > It is perfect for devs who want to learn how to build documented Laravel APIs from scratch.
 
-A simple API to manage books to show case API documentation with Scribe.
+In a nutchell, its a simple API to manage products to show case API documentation with Scribe.
 Use this project as a learning resource or a starting point for your own Laravel API.
 Skip the fake data API and start building your custom API with Laravel.
 
@@ -21,6 +21,9 @@ Skip the fake data API and start building your custom API with Laravel.
 -   [x] Checkout API
 -   [ ] API Versioning
 -   [ ] Unit Testing using [PestPHP](https://pestphp.com/docs/)
+-   [ ] Containerized with Docker[^1]
+
+[^1]: For those who want to use Docker, Coming soon!
 
 ## Requirements
 
