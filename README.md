@@ -1,6 +1,6 @@
 # Products Catalog API
 
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/alphaolomi/laravel-api-docs/run-tests?label=tests)](
+![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/alphaolomi/laravel-api-docs/run-tests?label=tests)
 
 > This project demonstrates how to build a Laravel API with API documentation using Scribe.
 > It serves as a backend for a simple Ecommerce sites like [Shop App](#).
