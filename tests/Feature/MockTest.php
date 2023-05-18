@@ -25,6 +25,7 @@ class NidaVerificationController
     public function verify(): array
     {
         $data = $this->service->verify();
+
         return json_decode($data, true);
     }
 }

@@ -10,12 +10,10 @@ beforeEach(function () {
     $this->user = User::factory()->create([
         'name' => 'John Doe',
         'email' => 'john@email.com',
-
     ]);
 });
 
 it('can be cast to string', function () {
-
     assertMatchesSnapshot('foo');
 });
 
