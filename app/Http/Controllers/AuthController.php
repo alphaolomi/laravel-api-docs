@@ -17,7 +17,7 @@ class AuthController extends Controller
     #[BodyParam("email", "string", "The Email of the user.", example: "user@example.com")]
     #[BodyParam("password", "string", "The password of the user.", example: "password")]
     #[Response([
-        "token" => "1|0M0VCKSJam4zQU058p3ZJ4GXCiDCWYkCyJflPegA",
+        "access_token" => "1|0M0VCKSJam4zQU058p3ZJ4GXCiDCWYkCyJflPegA",
         "user" => ["id" => 1, "name" => "John Doe", "email" => "johndoe@example.com"]
     ])]
     public function login(Request $request)
@@ -32,7 +32,11 @@ class AuthController extends Controller
 
         // Check password
         if (!$user || !Hash::check($fields['password'], $user->password)) {
-            return response(['message' => 'Bad credentials'], Response::HTTP_UNAUTHORIZED);
+            $data = [
+                'code' => 'INVALID_CREDENTIALS',
+            ];
+
+            return response($data, Response::HTTP_UNAUTHORIZED);
         }
 
         $deviceId = $request->ip() . '-' . hash('md5', $request->header('User-Agent'));

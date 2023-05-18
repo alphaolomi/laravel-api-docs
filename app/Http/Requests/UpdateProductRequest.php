@@ -15,8 +15,8 @@ class UpdateProductRequest extends FormRequest
             'name' => 'required|string|max:255',
             'description' => 'nullable|string',
             'price' => 'required|money',
-            'is_active' => 'required|boolean',
-            'cover_image' => 'required|string',
+            'is_active' => 'nullable|boolean',
+            'cover_image' => 'nullable|string',
         ];
     }
 

@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Cknow\Money\Casts\MoneyDecimalCast;
+use Illuminate\Contracts\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Concerns\HasUlids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -57,8 +58,8 @@ class Product extends Model
     ];
 
     // scope to only return active products
-    public function scopeActive($query)
+    public function scopeActive(Builder $query): void
     {
-        return $query->where('is_active', true);
+         $query->where('is_active', true);
     }
 }
