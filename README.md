@@ -1,6 +1,6 @@
 # Products Catalog API
 
-![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/alphaolomi/laravel-api-docs/run-tests?label=tests)
+[![Tests](https://github.com/alphaolomi/laravel-api-docs/actions/workflows/tests.yml/badge.svg)](https://github.com/alphaolomi/laravel-api-docs/actions/workflows/tests.yml)    [![codecov](https://codecov.io/github/alphaolomi/laravel-api-docs/branch/main/graph/badge.svg?token=0Y6W6JUL75)](https://codecov.io/github/alphaolomi/laravel-api-docs)
 
 > This project demonstrates how to build a Laravel API with API documentation using Scribe.
 > It serves as a backend for a simple Ecommerce sites like [Shop App](https://github.com/alphaolomi/shop-app).
@@ -96,11 +96,16 @@ The documentation will be available at `/docs/index.html` in your browser.
 
 Project uses PestPHP for testing.
 
+
 To run the tests, run the following command:
 
 ```bash
 composer test
 ```
+
+## Code coverage
+
+![Code Coverage](https://codecov.io/github/alphaolomi/laravel-api-docs/branch/main/graphs/sunburst.svg?token=0Y6W6JUL75)
 
 ## Authors
 
