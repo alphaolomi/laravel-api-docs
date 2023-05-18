@@ -16,15 +16,17 @@
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.13",
+        "driftingly/rector-laravel": "^0.20.0",
         "fakerphp/faker": "^1.9.1",
         "knuckleswtf/scribe": "^4.18",
         "laravel/pint": "^1.0",
         "laravel/sail": "^1.18",
-        "nunomaduro/larastan": "^2.0.1",
         "mockery/mockery": "^1.5",
         "nunomaduro/collision": "^7.0",
+        "nunomaduro/larastan": "^2.0.1",
         "pestphp/pest-plugin-laravel": "^2.0",
         "phpunit/phpunit": "^10.1",
+        "rector/rector": "^0.16.0",
         "spatie/laravel-ignition": "^2.0",
         "spatie/pest-plugin-snapshots": "^2.0"
     },
@@ -65,6 +67,9 @@
         }
     },
     "config": {
+        "platform": {
+            "php": "8.1"
+        },
         "optimize-autoloader": true,
         "preferred-install": "dist",
         "sort-packages": true,
