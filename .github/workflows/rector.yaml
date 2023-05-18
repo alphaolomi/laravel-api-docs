@@ -18,12 +18,9 @@ on:
 jobs:
   rector:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.head.repo.full_name == 'alphaolomi/laravel-api-docs'
     steps:
-      - if: github.event.pull_request.head.repo.full_name == github.repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
         with:
-          # Must be used to trigger workflow after push
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: shivammathur/setup-php@v2
