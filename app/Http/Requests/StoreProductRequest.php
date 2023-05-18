@@ -6,7 +6,6 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class StoreProductRequest extends FormRequest
 {
-
     /**
      *  @return array<string, \Illuminate\Contracts\Validation\Rule|array|string>
      */

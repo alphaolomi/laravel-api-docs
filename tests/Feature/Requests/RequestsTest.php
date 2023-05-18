@@ -6,8 +6,8 @@ test('all requests implement rules() and bodyParams() methods', function () {
 
     $requestFiles = File::glob(app_path('Http/Requests/*.php'));
 
-    $requestClasses =  collect($requestFiles)->map(function ($file) {
-        $className = 'App\\Http\\Requests\\' . str_replace('.php', '', basename($file));
+    $requestClasses = collect($requestFiles)->map(function ($file) {
+        $className = 'App\\Http\\Requests\\'.str_replace('.php', '', basename($file));
 
         return [$className];
     })->toArray();

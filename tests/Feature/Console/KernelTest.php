@@ -2,10 +2,10 @@
 
 // it can schedule work
 
-use Illuminate\Support\Facades\Artisan;
-use Symfony\Component\Process\Process;
 use Illuminate\Console\Scheduling\Schedule;
+use Illuminate\Support\Facades\Artisan;
 use function Pest\Laravel\artisan;
+use Symfony\Component\Process\Process;
 
 it('can schedule run schedule:run', function () {
     $schedule = app(Schedule::class);
@@ -23,14 +23,12 @@ it('can schedule run schedule:run', function () {
     $process->stop();
 })->group('flaky');
 
-
 // it('can schedule work', function () {
 
 //     $schedule = app(Schedule::class);
 //     $events = collect($schedule->events());
 //     $isEmpty = $events->isEmpty();
 //     $mpty = 'No scheduled tasks have been defined.';
-
 
 //     $process = Process::fromShellCommandline('php artisan schedule:work',null, null,null, 3);
 

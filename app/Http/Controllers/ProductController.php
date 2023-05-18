@@ -9,7 +9,7 @@ use App\Http\Resources\ProductResource;
 use App\Models\Product;
 use Knuckles\Scribe\Attributes\Group;
 
-#[Group("Products", "APIs for products")]
+#[Group('Products', 'APIs for products')]
 class ProductController extends Controller
 {
     /**

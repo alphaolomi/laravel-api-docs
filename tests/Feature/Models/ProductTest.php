@@ -10,17 +10,15 @@ it('can create Product', function () {
     expect($product->id)->toBeInt();
     expect($product->getFillable())->toBeArray();
 
-
     test()->assertDatabaseCount('products', 1)
-    ->expectsDatabaseQueryCount(1)
-    ->assertModelExists($product);
+        ->expectsDatabaseQueryCount(1)
+        ->assertModelExists($product);
 });
-
 
 // it can cast price as Money
 it('can cast price as Money', function () {
     $product = Product::factory()->create([
-        'price' => 1000
+        'price' => 1000,
     ]);
 
     expect($product->price)->toBeInstanceOf(Money::class);
@@ -30,11 +28,11 @@ it('can cast price as Money', function () {
 // scope active
 it('can scope active', function () {
     Product::factory()->create([
-        'is_active' => true
+        'is_active' => true,
     ]);
 
     Product::factory()->create([
-        'is_active' => false
+        'is_active' => false,
     ]);
 
     expect(Product::active()->count())->toBe(1);

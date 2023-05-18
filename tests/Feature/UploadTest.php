@@ -2,13 +2,8 @@
 
 namespace Tests\Feature;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
-
-
-use function Pest\Laravel\get;
 use function Pest\Laravel\post;
 use function Pest\Laravel\withCookie;
 
@@ -21,9 +16,8 @@ it('can upload files', function () {
 
     post('/avatar', ['avatar' => $file]);
 
-    Storage::assertExists('avatars/' . $file->hashName());
+    Storage::assertExists('avatars/'.$file->hashName());
 });
-
 
 it(' can interacting with cookies', function () {
     $color = 'blue';

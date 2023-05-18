@@ -3,7 +3,6 @@
 use App\Models\User;
 use function Pest\Laravel\travelTo;
 
-
 test('inactive user scope', function () {
     // Create a user that was last active 2 days ago...
     $user = User::factory()->create([

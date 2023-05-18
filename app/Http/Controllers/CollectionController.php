@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 
@@ -21,7 +20,7 @@ class CollectionController extends Controller
         // $upper = $collection->toUpper();
 
         // return $upper;
-        $data =[
+        $data = [
             ['name' => 'Desk', 'price' => 200],
             ['name' => 'Chair', 'price' => 100],
             ['name' => 'Bookcase', 'price' => 150],

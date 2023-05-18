@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Cknow\Money\Casts\MoneyDecimalCast;
 use Illuminate\Contracts\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Concerns\HasUlids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -19,6 +18,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $cover_image
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ *
  * @method static \Database\Factories\ProductFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Product newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Product newQuery()
@@ -31,6 +31,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|Product wherePrice($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Product whereUlid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Product whereUpdatedAt($value)
+ *
  * @mixin \Eloquent
  */
 class Product extends Model
@@ -60,6 +61,6 @@ class Product extends Model
     // scope to only return active products
     public function scopeActive(Builder $query): void
     {
-         $query->where('is_active', true);
+        $query->where('is_active', true);
     }
 }

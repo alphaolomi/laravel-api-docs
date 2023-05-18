@@ -22,7 +22,6 @@ it('can mutate name attribute', function () {
     expect($user->name)->toStartWith('J');
 });
 
-
 it('can not create a user without email verification', function () {
     $user = User::factory()->unverified()->create();
     // expect($user)->when(
@@ -33,9 +32,6 @@ it('can not create a user without email verification', function () {
     expect($user->hasVerifiedEmail())->toBeFalse();
 
 })->skip(fn () => (new User) instanceof MustVerifyEmail, 'MustVerifyEmail not supported');
-
-
-
 
 // fillable
 

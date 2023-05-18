@@ -21,14 +21,13 @@ test('user can register ok', function () {
     $data = [
         'name' => $user->name,
         'email' => $user->email,
-        'password' => 'password'
+        'password' => 'password',
     ];
 
     postJson('/api/register', $data)
         ->assertJsonStructure(['access_token', 'user']);
 
 });
-
 
 // test missing user cant login
 test('missing user cant login', function () {
@@ -48,7 +47,6 @@ test('user can logout', function () {
 
     postJson('/api/login', $data)
         ->assertJsonStructure(['access_token', 'user']);
-
 
     postJson('/api/logout')
         ->assertNoContent();

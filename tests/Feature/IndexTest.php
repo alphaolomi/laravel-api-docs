@@ -7,7 +7,6 @@ test('the application returns a successful response', function () {
     get('/')->assertOk();
 });
 
-
 test('auth', function () {
     get(route('holiday.test'));
     assertGuest();
