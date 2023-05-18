@@ -1,13 +1,16 @@
 <?php
 
 use App\Models\User;
-use function Spatie\Snapshots\assertMatchesJsonSnapshot;
-use function Spatie\Snapshots\assertMatchesSnapshot;
+
+
+use function Spatie\Snapshots\{assertMatchesSnapshot, assertMatchesJsonSnapshot};
+
 
 beforeEach(function () {
     $this->user = User::factory()->create([
         'name' => 'John Doe',
         'email' => 'john@email.com',
+
     ]);
 });
 

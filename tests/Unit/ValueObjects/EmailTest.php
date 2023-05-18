@@ -2,6 +2,7 @@
 
 use App\ValueObjects\Email;
 
+
 it('can be created from valid email', function (string $string): void {
 
     $email = Email::fromString($string);
