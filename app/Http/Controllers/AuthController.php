@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Hash;
 use Knuckles\Scribe\Attributes\BodyParam;
 use Knuckles\Scribe\Attributes\Endpoint;
 use Knuckles\Scribe\Attributes\Group;
+use Knuckles\Scribe\Attributes\Response as ResponseAttribute;
 use Knuckles\Scribe\Attributes\Unauthenticated;
 
 #[Group('Authentication', 'APIs for authentication')]
@@ -19,7 +20,7 @@ class AuthController extends Controller
     #[Unauthenticated]
     #[BodyParam('email', 'string', 'The Email of the user.', example: 'user@example.com')]
     #[BodyParam('password', 'string', 'The password of the user.', example: 'password')]
-    #[Response([
+    #[ResponseAttribute([
         'access_token' => '1|0M0VCKSJam4zQU058p3ZJ4GXCiDCWYkCyJflPegA',
         'user' => ['id' => 1, 'name' => 'John Doe', 'email' => 'johndoe@example.com'],
     ])]
@@ -85,6 +86,7 @@ class AuthController extends Controller
     #[Endpoint('Logout the user')]
     public function logout(Request $request)
     {
+        // @phpstan-ignore-next-line
         $request->user()->currentAccessToken()->delete();
 
         return response()->noContent();
