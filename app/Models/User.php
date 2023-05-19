@@ -76,7 +76,7 @@ class User extends Authenticatable
     */
     protected function name(): Attribute
     {
-        return Attribute::make(get: fn ($value) => ucfirst($value));
+        return Attribute::make(get: fn ($value): string => ucfirst((string) $value));
     }
 
     /*

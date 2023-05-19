@@ -13,7 +13,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/avatar', function () {
+Route::post('/avatar', function (): string {
     request()->file('avatar')->store('avatars');
 
     return 'ok';

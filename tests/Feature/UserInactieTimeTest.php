@@ -3,7 +3,7 @@
 use App\Models\User;
 use function Pest\Laravel\travelTo;
 
-test('inactive user scope', function () {
+test('inactive user scope', function (): void {
     // Create a user that was last active 2 days ago...
     $user = User::factory()->create([
         'email_verified_at' => now()->subDays(2),

@@ -9,7 +9,7 @@ use function Pest\Laravel\getJson;
 use function Pest\Laravel\postJson;
 use function Pest\Laravel\putJson;
 
-it('Product Controller', function () {
+it('Product Controller', function (): void {
     actingAs(App\Models\User::factory()->create());
     $product = Product::factory()->create();
     getJson('/api/products')->assertJsonStructure(['data' => [['id', 'name', 'price']]]);

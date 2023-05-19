@@ -25,7 +25,7 @@ class ProductController extends Controller
      */
     public function store(StoreProductRequest $request)
     {
-        return ProductResource::make(Product::create($request->validated()));
+        return ProductResource::make(Product::create($request->validated(null, null)));
     }
 
     /**
@@ -41,7 +41,7 @@ class ProductController extends Controller
      */
     public function update(UpdateProductRequest $request, Product $product)
     {
-        $product->update($request->validated());
+        $product->update($request->validated(null, null));
 
         return ProductResource::make($product);
     }

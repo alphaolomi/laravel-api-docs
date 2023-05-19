@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Artisan;
 use function Pest\Laravel\artisan;
 use Symfony\Component\Process\Process;
 
-it('can schedule run schedule:run', function () {
+it('can schedule run schedule:run', function (): void {
     $schedule = app(Schedule::class);
     $events = collect($schedule->events());
     $isEmpty = $events->isEmpty();

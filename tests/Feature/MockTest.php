@@ -26,13 +26,13 @@ class NidaVerificationController
     {
         $data = $this->service->verify();
 
-        return json_decode($data, true);
+        return json_decode((string) $data, true, 512, JSON_THROW_ON_ERROR);
     }
 }
 
-test('it can mock a class', function () {
+test('it can mock a class', function (): void {
 
-    $nidaService = $this->mock(NidaService::class, function (MockInterface $mock) {
+    $nidaService = $this->mock(NidaService::class, function (MockInterface $mock): void {
         $mock->shouldReceive('verify')->once()->andReturn(json_encode([
             'status' => 'success',
             'message' => 'NIDA verified',
@@ -47,5 +47,5 @@ test('it can mock a class', function () {
 
     expect($response)->toBeArray();
 
-    assertMatchesJsonSnapshot(json_encode($response));
+    assertMatchesJsonSnapshot(json_encode($response, JSON_THROW_ON_ERROR));
 });

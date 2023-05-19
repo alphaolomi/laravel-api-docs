@@ -2,7 +2,7 @@
 
 use function Pest\Laravel\actingAs;
 
-it('Health Controller', function () {
+it('Health Controller', function (): void {
     $user = \App\Models\User::factory()->create();
     actingAs($user)->getJson('/api/health-check')
         ->assertJsonStructure(['status', 'services' => ['database', 'redis']]);

@@ -4,7 +4,7 @@ use App\Models\User;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 
-it('can create user', function () {
+it('can create user', function (): void {
     $user = User::factory()->create();
 
     expect($user)->toBeInstanceOf(User::class);
@@ -16,13 +16,13 @@ it('can create user', function () {
 });
 
 // murators
-it('can mutate name attribute', function () {
+it('can mutate name attribute', function (): void {
     $user = User::factory()->create(['name' => 'john doe']);
 
     expect($user->name)->toStartWith('J');
 });
 
-it('can not create a user without email verification', function () {
+it('can not create a user without email verification', function (): void {
     $user = User::factory()->unverified()->create();
     // expect($user)->when(
     //     $user instanceof MustVerifyEmail,
@@ -31,7 +31,7 @@ it('can not create a user without email verification', function () {
 
     expect($user->hasVerifiedEmail())->toBeFalse();
 
-})->skip(fn () => (new User) instanceof MustVerifyEmail, 'MustVerifyEmail not supported');
+})->skip(fn (): bool => (new User) instanceof MustVerifyEmail, 'MustVerifyEmail not supported');
 
 // fillable
 
