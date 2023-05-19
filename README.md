@@ -1,6 +1,8 @@
 # Products Catalog API
 
-[![Tests](https://github.com/alphaolomi/laravel-api-docs/actions/workflows/tests.yml/badge.svg)](https://github.com/alphaolomi/laravel-api-docs/actions/workflows/tests.yml)    [![codecov](https://codecov.io/github/alphaolomi/laravel-api-docs/branch/main/graph/badge.svg?token=0Y6W6JUL75)](https://codecov.io/github/alphaolomi/laravel-api-docs)
+[![gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg)](https://gitmoji.dev)       [![Tests](https://github.com/alphaolomi/laravel-api-docs/actions/workflows/tests.yml/badge.svg)](https://github.com/alphaolomi/laravel-api-docs/actions/workflows/tests.yml)    [![codecov](https://codecov.io/github/alphaolomi/laravel-api-docs/branch/main/graph/badge.svg?token=0Y6W6JUL75)](https://codecov.io/github/alphaolomi/laravel-api-docs)
+
+
 
 > This project demonstrates how to build a Laravel API with API documentation using Scribe.
 > It serves as a backend for a simple Ecommerce sites like [Shop App](https://github.com/alphaolomi/shop-app).
