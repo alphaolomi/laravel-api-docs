@@ -7,7 +7,7 @@ uses(
     Illuminate\Foundation\Testing\LazilyRefreshDatabase::class,
 )->in('Feature');
 
-expect()->extend('toBeOne', fn() => $this->toBe(1));
+expect()->extend('toBeOne', fn () => $this->toBe(1));
 
 function asUser(array $data = []): Tests\TestCase
 {
