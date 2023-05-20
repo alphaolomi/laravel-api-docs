@@ -5,14 +5,18 @@ ENV PHP_DISMOD=bz2,calendar,exiif,ffi,intl,gettext,ldap,mysqli,imap,pdo_pgsql,pg
 
 WORKDIR /app
 
-COPY composer.json composer.lock
-
-RUN composer install --no-interaction --optimize-autoloader --no-dev
-
+# COPY composer.json composer.lock
 COPY . .
 
+# RUN composer install --no-interaction --optimize-autoloader --no-dev
+ENV COMPOSER_ALLOW_SUPERUSER=1
+
+RUN composer install --no-interaction
+
+# COPY . .
+
 RUN php artisan optimize
-RUN php artisan horizon:publish
+# RUN php artisan horizon:publish
 
 # Ensure all of our files are owned by the same user and group.
 RUN chown -R application:application .
