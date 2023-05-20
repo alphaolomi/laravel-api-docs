@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  api:
+    image: ghcr.io/alphaolomi/laravel-api-docs-prod:latest
+    build:
+      dockerfile: Dockerfile.prod
+    env_file:
+      - .env.production
+    volumes:
+      - ./storage:/app/storage
+    ports:
+      - "8000:80"
+    networks:
+      - app
+  redis:
+    image: redis:6
+    volumes:
+      - 'data.redis:/data'
+    networks:
+      - app
+    healthcheck:
+      test: [ "CMD", "redis-cli", "ping" ]
+volumes:
+  data.redis:
+    driver: local
+networks:
+  app:
+    driver: bridge
