@@ -14,7 +14,7 @@ services:
     networks:
       - app
   redis:
-    image: redis:6
+    image: redis:alpine
     volumes:
       - 'data.redis:/data'
     networks:
