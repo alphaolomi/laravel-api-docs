@@ -1,0 +1,626 @@
+{
+	"info": {
+		"_postman_id": "ea578b5f-33bc-40e0-be9d-af7706e5d9b7",
+		"name": "Products API",
+		"description": "This is a sample API for a products catalog.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "8908389-ea578b5f-33bc-40e0-be9d-af7706e5d9b7"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "get Api User",
+							"id": "58191899-7a7b-47ab-b6e3-4f8ad948be70",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/user",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"user"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "05ad0622-a14c-4ccb-81b5-b2c5b4b998fb",
+									"name": "Untitled Example",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/user",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"email_verified_at\": \"<string>\",\n  \"created_at\": \"<string>\",\n  \"updated_at\": \"<string>\"\n}"
+								}
+							]
+						}
+					],
+					"id": "02df8333-9200-4fac-9497-4b0cfe974d29"
+				},
+				{
+					"name": "products",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Display the specified resource.",
+									"id": "0b51ee04-bf66-4c04-ad1f-8e7a2f50b2bc",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/products/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"products",
+												":id"
+											],
+											"variable": [
+												{
+													"id": "3c07edbf-69f4-47e8-8262-29fb0708338d",
+													"key": "id",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "25137edb-8ea0-4f51-a21e-681f3e0c40a9",
+											"name": "Untitled Example",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/products/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"products",
+														":id"
+													],
+													"variable": [
+														{
+															"id": "3c07edbf-69f4-47e8-8262-29fb0708338d",
+															"key": "id",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"exception\": \"<string>\",\n  \"file\": \"<string>\",\n  \"line\": \"<integer>\",\n  \"trace\": [\n    {\n      \"file\": \"<string>\",\n      \"line\": \"<integer>\",\n      \"function\": \"<string>\",\n      \"class\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"file\": \"<string>\",\n      \"line\": \"<integer>\",\n      \"function\": \"<string>\",\n      \"class\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ]\n}"
+										}
+									]
+								},
+								{
+									"name": "Update the specified resource in storage.",
+									"id": "1e217d55-f471-4201-8c88-74d17c6d843c",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\",\n  \"price\": \"<string>\",\n  \"is_active\": \"<boolean>\",\n  \"cover_image\": \"<string>\",\n  \"description\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/products/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"products",
+												":id"
+											],
+											"variable": [
+												{
+													"id": "b5791894-064a-410b-8b62-18fa01e9c9e0",
+													"key": "id",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Remove the specified resource from storage.",
+									"id": "b2cf5562-3f8b-4b1f-9473-ac15c013873c",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/products/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"products",
+												":id"
+											],
+											"variable": [
+												{
+													"id": "fbf65b4a-08bc-4363-8fdb-18895c3f6fed",
+													"key": "id",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"id": "7965ed4b-1e75-4b0c-924b-0fdb2a34228a"
+						},
+						{
+							"name": "Display a listing of the resource.",
+							"id": "abb69eba-995f-4c76-924b-2b7c731b3664",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/products",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"products"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "d765d255-9c89-4442-bbef-d65d9eb1d530",
+									"name": "Untitled Example",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/products",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"products"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"data\": \"<array>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Store a newly created resource in storage.",
+							"id": "eb499db8-01e1-48c9-8d93-ce90cad7d22c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\",\n  \"price\": \"<string>\",\n  \"is_active\": \"<boolean>\",\n  \"cover_image\": \"<string>\",\n  \"description\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/products",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"products"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "15e43311-d829-417a-89be-7fbaf8f1fec6"
+				},
+				{
+					"name": "logout",
+					"item": [
+						{
+							"name": "Logout the user",
+							"id": "c62eeb3b-4d40-4a2d-800a-830a21f6c180",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/logout",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"logout"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "bcc45c07-9395-4b68-bc18-c165454e7e0c"
+				},
+				{
+					"name": "login",
+					"item": [
+						{
+							"name": "Login the user",
+							"id": "e4d03027-c78e-4578-a79e-a4d1a54a2494",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "0de21d70-1b36-4fc7-9762-a7bce13f5f45",
+									"name": "Untitled Example",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/login",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"token\": \"<string>\",\n  \"user\": {\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\",\n    \"email\": \"<string>\"\n  }\n}"
+								}
+							]
+						}
+					],
+					"id": "a53fda21-22ca-4027-b72d-247a160a9313"
+				},
+				{
+					"name": "health-check",
+					"item": [
+						{
+							"name": "get Api Health Check",
+							"id": "d51b131e-47a8-4a05-8063-fad81040debe",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/health-check",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"health-check"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "2ad39b06-9dab-4c29-850c-d6009741bae3",
+									"name": "Untitled Example",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/health-check",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"health-check"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<string>\",\n  \"services\": {\n    \"database\": \"<string>\",\n    \"redis\": \"<string>\"\n  }\n}"
+								}
+							]
+						}
+					],
+					"id": "76e553ce-5a7c-4d36-885c-88f1b938a62e"
+				},
+				{
+					"name": "collection",
+					"item": [
+						{
+							"name": "get Api Collection",
+							"id": "ac962238-9687-458f-aa65-12e8e78e1076",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/collection",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"collection"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "eb09fa29-0177-4493-8c42-1f0747fa3c5c",
+									"name": "Untitled Example",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/collection",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"collection"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"1\": {\n    \"name\": \"<string>\",\n    \"price\": \"<integer>\"\n  },\n  \"3\": {\n    \"name\": \"<string>\",\n    \"price\": \"<integer>\"\n  }\n}"
+								}
+							]
+						}
+					],
+					"id": "aee0631c-6645-45d3-a578-74ecf6d424aa"
+				}
+			],
+			"id": "c16242ef-dea9-4639-b3d6-595360cd642a"
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{bearerToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"variable": [
+		{
+			"id": "d5b8dbb7-682d-4016-b86a-97272d08b269",
+			"key": "baseUrl",
+			"value": "http://localhost:8000"
+		}
+	]
+}
