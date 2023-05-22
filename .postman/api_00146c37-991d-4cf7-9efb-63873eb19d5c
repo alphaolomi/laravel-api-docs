@@ -10,7 +10,6 @@ id = 00146c37-991d-4cf7-9efb-63873eb19d5c
 [config.relations.collections]
 rootDirectory = public
 files[] = {"id":"8908389-d17d50fd-30f4-4ab8-8b82-76966799b6b3","path":"docs/collection.json","metaData":{}}
-files[] = {"id":"8908389-ea578b5f-33bc-40e0-be9d-af7706e5d9b7","path":"Products API.json","metaData":{"generateCollectionPreferences":"{\"folderStrategy\":\"Paths\",\"includeDeprecated\":true,\"includeAuthInfoInExample\":true,\"enableOptionalParameters\":true,\"keepImplicitHeaders\":false,\"requestNameSource\":\"Fallback\",\"indentCharacter\":\"Space\",\"requestParametersResolution\":\"Example\",\"exampleParametersResolution\":\"Example\",\"collapseFolders\":true,\"optimizeConversion\":true}"}}
 
 [config.relations.collections.metaData]
 
