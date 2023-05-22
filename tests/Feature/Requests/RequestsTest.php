@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\File;
 
-test('all requests implement rules() and bodyParams() methods', function () {
+test('all requests implement rules() and bodyParams() methods', function (): void {
 
     $requestFiles = File::glob(app_path('Http/Requests/*.php'));
 

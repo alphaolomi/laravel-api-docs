@@ -6,7 +6,7 @@ use App\Models\User;
 use Laravel\Sanctum\Sanctum;
 use function Pest\Laravel\postJson;
 
-test('user can login ok', function () {
+test('user can login ok', function (): void {
     $user = User::factory()->create();
     $data = ['email' => $user->email, 'password' => 'password'];
 
@@ -16,7 +16,7 @@ test('user can login ok', function () {
 });
 
 // /api/register POST
-test('user can register ok', function () {
+test('user can register ok', function (): void {
     $user = User::factory()->make();
     $data = [
         'name' => $user->name,
@@ -30,7 +30,7 @@ test('user can register ok', function () {
 });
 
 // test missing user cant login
-test('missing user cant login', function () {
+test('missing user cant login', function (): void {
     $data = ['email' => 'bad@server.com', 'password' => 'password'];
 
     postJson('/api/login', $data)
@@ -39,7 +39,7 @@ test('missing user cant login', function () {
 });
 
 // test user can logout
-test('user can logout', function () {
+test('user can logout', function (): void {
     $user = User::factory()->create();
     $data = ['email' => $user->email, 'password' => 'password'];
 

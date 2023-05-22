@@ -7,7 +7,7 @@ use Illuminate\Foundation\Http\FormRequest;
 class StoreProductRequest extends FormRequest
 {
     /**
-     *  @return array<string, \Illuminate\Contracts\Validation\Rule|array|string>
+     * @return array{name: string, description: string, price: string, is_active: string, cover_image: string}
      */
     public function rules(): array
     {
@@ -20,7 +20,10 @@ class StoreProductRequest extends FormRequest
         ];
     }
 
-    public function bodyParameters()
+    /**
+     * @return array{name: array{description: string, example: string}, description: array{description: string, example: string}, price: array{description: string, example: int}, is_active: array{description: string, example: true}, cover_image: array{description: string, example: string}}
+     */
+    public function bodyParameters(): array
     {
         return [
             'name' => [

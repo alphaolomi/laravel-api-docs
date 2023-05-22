@@ -7,7 +7,7 @@ use Illuminate\Foundation\Http\FormRequest;
 class RegisterRequest extends FormRequest
 {
     /**
-     *  @return array<string, \Illuminate\Contracts\Validation\Rule|array|string>
+     * @return array{name: string, email: string, password: string}
      */
     public function rules(): array
     {
@@ -18,7 +18,10 @@ class RegisterRequest extends FormRequest
         ];
     }
 
-    public function bodyParameters()
+    /**
+     * @return array{name: array{description: string, example: string}, email: array{description: string, example: string}, password: array{description: string, example: string}}
+     */
+    public function bodyParameters(): array
     {
         return [
             'name' => [

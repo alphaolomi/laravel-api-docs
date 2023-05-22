@@ -45,7 +45,6 @@ class AuthController extends Controller
 
         $deviceId = $request->ip().'-'.hash('md5', $request->header('User-Agent'));
 
-        /** @var \Laravel\Sanctum\NewAccessToken */
         $token = $user->createToken($deviceId);
 
         $content = [
@@ -63,7 +62,7 @@ class AuthController extends Controller
     #[BodyParam('password', 'string', 'The password of the user.', example: 'password')]
     public function register(RegisterRequest $request)
     {
-        $fields = $request->validated();
+        $fields = $request->validated(null, null);
         logger($fields);
 
         $user = User::create([

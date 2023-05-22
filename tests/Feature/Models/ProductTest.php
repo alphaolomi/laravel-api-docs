@@ -3,7 +3,7 @@
 use App\Models\Product;
 use Cknow\Money\Money;
 
-it('can create Product', function () {
+it('can create Product', function (): void {
     $product = Product::factory()->create();
 
     expect($product)->toBeInstanceOf(Product::class);
@@ -16,7 +16,7 @@ it('can create Product', function () {
 });
 
 // it can cast price as Money
-it('can cast price as Money', function () {
+it('can cast price as Money', function (): void {
     $product = Product::factory()->create([
         'price' => 1000,
     ]);
@@ -26,7 +26,7 @@ it('can cast price as Money', function () {
 });
 
 // scope active
-it('can scope active', function () {
+it('can scope active', function (): void {
     Product::factory()->create([
         'is_active' => true,
     ]);

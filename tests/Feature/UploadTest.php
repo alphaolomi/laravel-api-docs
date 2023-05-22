@@ -7,10 +7,10 @@ use Illuminate\Support\Facades\Storage;
 use function Pest\Laravel\post;
 use function Pest\Laravel\withCookie;
 
-it('can upload files', function () {
+it('can upload files', function (): void {
     Storage::fake();
-
-    [$width, $height] = [100, 100];
+    $width = 100;
+    $height = 100;
 
     $file = UploadedFile::fake()->image('avatar.jpg', $width, $height)->size(100);
 
@@ -19,7 +19,7 @@ it('can upload files', function () {
     Storage::assertExists('avatars/'.$file->hashName());
 });
 
-it(' can interacting with cookies', function () {
+it(' can interacting with cookies', function (): void {
     $color = 'blue';
 
     $response = withCookie('color', $color)->get('/');

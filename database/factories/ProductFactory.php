@@ -10,16 +10,16 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 class ProductFactory extends Factory
 {
     /**
-     * @return array<string, mixed>
+     * @return array{name: string, description: string, price: float, is_active: bool, cover_image: string}
      */
     public function definition(): array
     {
         return [
-            'name' => $this->faker->sentence(3),
-            'description' => $this->faker->paragraph(4),
-            'price' => $this->faker->randomFloat(2, 10000, 300000),
-            'is_active' => $this->faker->boolean(80),
-            'cover_image' => $this->faker->imageUrl(640, 480, 'products', false, 'Shopify'),
+            'name' => fake()->sentence(3),
+            'description' => fake()->paragraph(4),
+            'price' => fake()->randomFloat(2, 10000, 300000),
+            'is_active' => fake()->boolean(80),
+            'cover_image' => fake()->imageUrl(640, 480, 'products', false, 'Shopify'),
         ];
     }
 }
