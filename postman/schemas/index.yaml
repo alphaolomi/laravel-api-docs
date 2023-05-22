@@ -1,7 +1,7 @@
 openapi: 3.0.3
 info:
   title: 'Products API'
-  description: 'This is a sample API for a products catalog.'
+  description: 'This is a simple API for a products catalog.'
   version: 1.0.0
 servers:
   -
