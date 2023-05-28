@@ -9,7 +9,7 @@ use App\Http\Resources\ProductResource;
 use App\Models\Product;
 use Knuckles\Scribe\Attributes\Group;
 
-#[Group("Products", "APIs for products")]
+#[Group('Products', 'APIs for products')]
 class ProductController extends Controller
 {
     /**
@@ -25,7 +25,7 @@ class ProductController extends Controller
      */
     public function store(StoreProductRequest $request)
     {
-        return Product::create($request->validated());
+        return ProductResource::make(Product::create($request->validated()));
     }
 
     /**

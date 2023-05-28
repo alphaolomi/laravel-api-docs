@@ -1,0 +1,32 @@
+# .github/labeler.yml
+# https://github.com/actions/labeler
+
+# Add 'core' label to any change within the 'app' directory
+app-core:
+  - app/**/*
+  - config/*
+  - routes/**/*
+
+# Add 'documentation' label to any change to markdown files within the 'docs' directory
+documentation:
+  - docs/**/*
+
+# Add 'testing' label to any change to test files within the 'tests' directory
+testing:
+  - tests/**/*
+
+# Add 'database' label to any change to database files within the 'database' directory
+database:
+  - database/**/*
+
+# Add 'frontend' label to any change to JavaScript or CSS files within the 'resources/' directory
+frontend:
+  - resources/css/**/*
+  - resources/js/**/*
+
+public-assets:
+  - public/**/*
+
+composer:
+  - composer.json
+  - composer.lock

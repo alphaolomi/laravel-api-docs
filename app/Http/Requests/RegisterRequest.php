@@ -6,7 +6,6 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class RegisterRequest extends FormRequest
 {
-
     /**
      *  @return array<string, \Illuminate\Contracts\Validation\Rule|array|string>
      */
@@ -37,5 +36,4 @@ class RegisterRequest extends FormRequest
         ];
 
     }
-
 }

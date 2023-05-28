@@ -17,8 +17,7 @@ return new class extends Migration
             $table->string('description')->nullable();
             $table->decimal('price', 8, 2);
             $table->boolean('is_active')->default(true);
-            $table->string('cover_image')->default(true);
-
+            $table->string('cover_image')->nullable(true);
 
             // images
             // images

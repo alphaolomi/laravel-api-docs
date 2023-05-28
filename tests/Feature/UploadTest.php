@@ -2,43 +2,27 @@
 
 namespace Tests\Feature;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
-use Tests\TestCase;
+use function Pest\Laravel\post;
+use function Pest\Laravel\withCookie;
 
-class ExampleTest extends TestCase
-{
-    public function test_albums_can_be_uploaded()
-    {
-        Storage::fake('photos');
+it('can upload files', function () {
+    Storage::fake();
 
-        $response = $this->json('POST', '/photos', [
-            UploadedFile::fake()->image('photo1.jpg'),
-            UploadedFile::fake()->image('photo2.jpg')
-        ]);
+    [$width, $height] = [100, 100];
 
-        $storage = Storage::disk('photos');
-        // Assert one or more files were stored...
-        $storage->assertExists('photo1.jpg');
-        $storage->assertExists(['photo1.jpg', 'photo2.jpg']);
+    $file = UploadedFile::fake()->image('avatar.jpg', $width, $height)->size(100);
 
-        // Assert one or more files were not stored...
-        $storage->assertMissing('missing.jpg');
-        $storage->assertMissing(['missing.jpg', 'non-existing.jpg']);
+    post('/avatar', ['avatar' => $file]);
 
-        // Assert that a given directory is empty...
-        $storage->assertDirectoryEmpty('/wallpapers');
-    }
+    Storage::assertExists('avatars/'.$file->hashName());
+});
 
-    public function test_interacting_with_cookies()
-    {
-        $response = $this->withCookie('color', 'blue')->get('/');
+it(' can interacting with cookies', function () {
+    $color = 'blue';
 
-        $response = $this->withCookies([
-            'color' => 'blue',
-            'name' => 'Taylor',
-        ])->get('/');
-    }
-}
+    $response = withCookie('color', $color)->get('/');
+
+    $response->assertCookie('color', 'red');
+});

@@ -6,7 +6,6 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class StoreProductRequest extends FormRequest
 {
-
     /**
      *  @return array<string, \Illuminate\Contracts\Validation\Rule|array|string>
      */
@@ -16,8 +15,8 @@ class StoreProductRequest extends FormRequest
             'name' => 'required|string|max:255',
             'description' => 'nullable|string',
             'price' => 'required|money',
-            'is_active' => 'required|boolean',
-            'cover_image' => 'required|string',
+            'is_active' => 'nullable|boolean',
+            'cover_image' => 'nullable|url|image|max:1024',
         ];
     }
 

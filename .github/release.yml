@@ -1,0 +1,27 @@
+# .github/release.yml
+# https://docs.github.com/en/repositories/releasing-projects-on-github/automatically-generated-release-notes
+changelog:
+  exclude:
+    labels:
+      - ignore-for-release
+    # authors:
+    # - octocat
+  categories:
+    - title: Features 🎉
+      labels:
+        - feature
+        - enhancement
+    - title: Bug Fixes 🐛
+      labels:
+        - bug
+        - fix
+    - title: Breaking Changes 🛠
+      labels:
+        - breaking-change
+
+    - title: Other Changes
+      labels:
+        - "*"
+    - title: 👒 Dependencies
+      labels:
+        - dependencies
