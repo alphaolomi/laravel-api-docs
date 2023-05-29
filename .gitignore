@@ -21,3 +21,5 @@ yarn-error.log
 _ide_helper.php
 coverage
 
+rr
+.rr.yaml
