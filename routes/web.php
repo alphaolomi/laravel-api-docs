@@ -13,14 +13,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/avatar', function () {
-    request()->file('avatar')->store('avatars');
+Route::middleware(['treblle'])->group(function () {
+    Route::post('/avatar', function () {
+        request()->file('avatar')->store('avatars');
 
-    return 'ok';
+        return 'ok';
+    });
 });
 
-Route::middleware(['auth'])->get('/test', function () {
+
+// 'auth',
+Route::middleware([ 'treblle'])->get('/test', function () {
     $ed = easter_date();
 
-    return (date('Y-m-d', $ed) === date('Y-m-d')) ? 'Happy Easter' : '';
+    $data =  (date('Y-m-d', $ed) === date('Y-m-d')) ? 'Happy Easter' : '';
+
+    return response()->json([
+        'data' => $data,
+    ]);
 })->name('holiday.test');
