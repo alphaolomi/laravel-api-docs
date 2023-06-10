@@ -1,31 +1,6 @@
-# Products Catalog API
+# Simple api docs
 
-[![gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg)](https://gitmoji.dev)       [![Tests](https://github.com/alphaolomi/laravel-api-docs/actions/workflows/tests.yml/badge.svg)](https://github.com/alphaolomi/laravel-api-docs/actions/workflows/tests.yml)    [![codecov](https://codecov.io/github/alphaolomi/laravel-api-docs/branch/main/graph/badge.svg?token=0Y6W6JUL75)](https://codecov.io/github/alphaolomi/laravel-api-docs)
-
-
-
-> This project demonstrates how to build a Laravel API with API documentation using Scribe.
-> It serves as a backend for a simple Ecommerce sites like [Shop App](https://github.com/alphaolomi/shop-app).
-> It is perfect for devs who want to learn how to build documented Laravel APIs from scratch.
-
-In a nutchell, its a simple API to manage products to show case API documentation with Scribe.
-Use this project as a learning resource or a starting point for your own Laravel API.
-Skip the fake data API and start building your custom API with Laravel.
-
-![API Documentation](./public//docs.png)
-
-## Features
-
--   [x] Authentication with Bearer Token using [Sanctum](https://laravel.com/docs/9.x/sanctum)
--   [x] API Documentation with [Scribe](https://scribe.knuckles.wtf/laravel/getting-started)
--   [x] Product LCRUD API
--   [x] Cart LCRUD API
--   [x] Checkout API
--   [ ] API Versioning
--   [ ] Unit Testing using [PestPHP](https://pestphp.com/docs/)
--   [ ] Containerized with Docker[^1]
-
-[^1]: For those who want to use Docker, Coming soon!
+This project demonstrates how to build a Laravel API with API documentation using Scribe.
 
 ## Requirements
 
@@ -132,4 +107,4 @@ Your support is greatly appreciated! Thank you for being a part of this journey.
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+The MIT License (MIT).

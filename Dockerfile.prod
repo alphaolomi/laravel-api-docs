@@ -2,21 +2,15 @@ FROM webdevops/php-nginx:8.1-alpine
 
 ENV WEB_DOCUMENT_ROOT=/app/public
 ENV PHP_DISMOD=bz2,calendar,exiif,ffi,intl,gettext,ldap,mysqli,imap,pdo_pgsql,pgsql,soap,sockets,sysvmsg,sysvsm,sysvshm,shmop,xsl,zip,gd,apcu,vips,yaml,imagick,mongodb,amqp
-
+ENV COMPOSER_ALLOW_SUPERUSER=1
 WORKDIR /app
 
-# COPY composer.json composer.lock
 COPY . .
 
-# RUN composer install --no-interaction --optimize-autoloader --no-dev
-ENV COMPOSER_ALLOW_SUPERUSER=1
-
-RUN composer install --no-interaction
-
-# COPY . .
-
+RUN composer install
+COPY .env.production .env
+RUN php artisan storage:link
 RUN php artisan optimize
-# RUN php artisan horizon:publish
 
 # Ensure all of our files are owned by the same user and group.
 RUN chown -R application:application .

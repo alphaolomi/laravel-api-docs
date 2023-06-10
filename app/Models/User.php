@@ -84,7 +84,7 @@ class User extends Authenticatable
     | Defaults
     |--------------------------------------------------------------------------
     */
-    public function getInactityDuration(): \Illuminate\Support\Carbon
+    public function getInactivityDuration(): \Illuminate\Support\Carbon
     {
         return now()->subWeek();
     }
@@ -96,6 +96,6 @@ class User extends Authenticatable
     */
     public function scopeInactive(Builder $query): void
     {
-        $query->where('updated_at', '<', $this->getInactityDuration());
+        $query->where('updated_at', '<', $this->getInactivityDuration());
     }
 }

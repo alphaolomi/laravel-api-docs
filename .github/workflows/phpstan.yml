@@ -20,7 +20,9 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.1'
+
       - name: Install Dependencies
         run: composer install --prefer-dist --no-interaction --no-progress
+
       - name: Run PHPStan Static Analysis
         run: php vendor/bin/phpstan analyse --configuration phpstan.neon --no-progress --error-format=github
