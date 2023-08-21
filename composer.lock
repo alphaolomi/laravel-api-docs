@@ -63,16 +63,16 @@
         },
         {
             "name": "cknow/laravel-money",
-            "version": "v7.1.0",
+            "version": "v7.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cknow/laravel-money.git",
-                "reference": "a98ca18f72abb864a39530d81f869494ff22fd83"
+                "reference": "d54ebc59342ed2a68647cc878444ef48af9f21ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cknow/laravel-money/zipball/a98ca18f72abb864a39530d81f869494ff22fd83",
-                "reference": "a98ca18f72abb864a39530d81f869494ff22fd83",
+                "url": "https://api.github.com/repos/cknow/laravel-money/zipball/d54ebc59342ed2a68647cc878444ef48af9f21ef",
+                "reference": "d54ebc59342ed2a68647cc878444ef48af9f21ef",
                 "shasum": ""
             },
             "require": {
@@ -80,15 +80,15 @@
                 "ext-json": "*",
                 "illuminate/support": "^7.0|^8.0|^9.0|^10.0",
                 "illuminate/view": "^7.0|^8.0|^9.0|^10.0",
-                "moneyphp/money": "^3.3|^4.0.3",
+                "moneyphp/money": "^3.3|^4.2",
                 "php": "^7.3|^8.0"
             },
             "require-dev": {
                 "graham-campbell/testbench": "^5.7",
                 "illuminate/filesystem": "^7.0|^8.0|^9.0|^10.0",
-                "mockery/mockery": "^1.5",
+                "mockery/mockery": "^1.6",
                 "phpunit/phpunit": "^8.5|^9.5.10|^10.0",
-                "spatie/phpunit-watcher": "^1.0"
+                "spatie/phpunit-watcher": "^1.23"
             },
             "type": "library",
             "extra": {
@@ -125,9 +125,9 @@
             ],
             "support": {
                 "issues": "https://github.com/cknow/laravel-money/issues",
-                "source": "https://github.com/cknow/laravel-money/tree/v7.1.0"
+                "source": "https://github.com/cknow/laravel-money/tree/v7.2.0"
             },
-            "time": "2023-02-18T14:33:06+00:00"
+            "time": "2023-08-18T11:13:55+00:00"
         },
         {
             "name": "composer/semver",
@@ -2185,16 +2185,16 @@
         },
         {
             "name": "moneyphp/money",
-            "version": "v4.1.1",
+            "version": "v4.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/moneyphp/money.git",
-                "reference": "9682220995ffd396843be5b4ee1e5f2c2d6ecee2"
+                "reference": "f660ab7f1d7a4c2ffdd30f50c55ed2c95c26fc3f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/moneyphp/money/zipball/9682220995ffd396843be5b4ee1e5f2c2d6ecee2",
-                "reference": "9682220995ffd396843be5b4ee1e5f2c2d6ecee2",
+                "url": "https://api.github.com/repos/moneyphp/money/zipball/f660ab7f1d7a4c2ffdd30f50c55ed2c95c26fc3f",
+                "reference": "f660ab7f1d7a4c2ffdd30f50c55ed2c95c26fc3f",
                 "shasum": ""
             },
             "require": {
@@ -2268,9 +2268,9 @@
             ],
             "support": {
                 "issues": "https://github.com/moneyphp/money/issues",
-                "source": "https://github.com/moneyphp/money/tree/v4.1.1"
+                "source": "https://github.com/moneyphp/money/tree/v4.2.0"
             },
-            "time": "2023-04-11T09:18:34+00:00"
+            "time": "2023-08-16T14:31:24+00:00"
         },
         {
             "name": "monolog/monolog",
