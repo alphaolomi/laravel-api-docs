@@ -1,0 +1,459 @@
+{
+    "info": {
+        "_postman_id": "6858e23d-6e74-4dcc-9491-10162413ec9e",
+        "name": "Products API",
+        "description": "This is a sample API for a products catalog.",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_exporter_id": "8908389"
+    },
+    "item": [
+        {
+            "name": "Authentication",
+            "description": "APIs for authentication",
+            "item": [
+                {
+                    "name": "Login the user",
+                    "description": "Endpoint to authenticate a user and retrieve a token.",
+                    "request": {
+                        "auth": {
+                            "type": "noauth"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"email\": \"user@example.com\",\n    \"password\": \"password\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/api/login",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["api", "login"]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Login success response",
+                            "originalRequest": {
+                                "auth": {
+                                    "type": "noauth"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"email\": \"user@example.com\",\n    \"password\": \"password\"\n}"
+                                },
+                                
+                                "url": {
+                                    "raw": "{{baseUrl}}/api/login",
+                                    "host": ["{{baseUrl}}"],
+                                    "path": ["api", "login"]
+                                }
+                            },
+                            "code": 200,
+                            "header": [],
+                            "cookie": [],
+                            "body": "{\"token\":\"1|0M0VCKSJam4zQU058p3ZJ4GXCiDCWYkCyJflPegA\",\"user\":{\"id\":1,\"name\":\"John Doe\",\"email\":\"johndoe@example.com\"}}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Logout the user",
+                    "description": "Endpoint to logout the authenticated user.",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/api/logout",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["api", "logout"]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Logout success response",
+                            "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/api/logout",
+                                    "host": ["{{baseUrl}}"],
+                                    "path": ["api", "logout"]
+                                }
+                            },
+                            "code": 200,
+                            "header": [],
+                            "cookie": [],
+                            "body": "{\"message\":\"Successfully logged out.\"}"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Utility",
+            "description": "APIs for common utility operations",
+            "item": [
+                {
+                    "name": "Ping server",
+                    "description": "Endpoint to check server's health.",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{baseUrl}}/api/ping",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["api", "ping"]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Ping response",
+                            "originalRequest": {
+                                "method": "GET",
+                                "url": {
+                                    "raw": "{{baseUrl}}/api/ping",
+                                    "host": ["{{baseUrl}}"],
+                                    "path": ["api", "ping"]
+                                }
+                            },
+                            "code": 200,
+                            "body": "{\"message\":\"Pong\"}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Get server time",
+                    "description": "Endpoint to retrieve the current server time.",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{baseUrl}}/api/time",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["api", "time"]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Server time response",
+                            "originalRequest": {
+                                "method": "GET",
+                                "url": {
+                                    "raw": "{{baseUrl}}/api/time",
+                                    "host": ["{{baseUrl}}"],
+                                    "path": ["api", "time"]
+                                }
+                            },
+                            "code": 200,
+                            "body": "{\"current_time\":\"2023-09-22T12:00:00Z\"}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Get application version",
+                    "description": "Endpoint to retrieve the current application version.",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{baseUrl}}/api/version",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["api", "version"]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Application version response",
+                            "originalRequest": {
+                                "method": "GET",
+                                "url": {
+                                    "raw": "{{baseUrl}}/api/version",
+                                    "host": ["{{baseUrl}}"],
+                                    "path": ["api", "version"]
+                                }
+                            },
+                            "code": 200,
+                            "body": "{\"version\":\"1.0.0\"}"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Products Management",
+            "description": "APIs for managing products",
+            "item": [
+                {
+                    "name": "List Products",
+                    "description": "Retrieve a list of all products.",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/api/products",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["api", "products"]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "List Products response",
+                            "originalRequest": {
+                                "method": "GET",
+                                "url": {
+                                    "raw": "{{baseUrl}}/api/products",
+                                    "host": ["{{baseUrl}}"],
+                                    "path": ["api", "products"]
+                                }
+                            },
+                            "code": 200,
+                            "body": "[{\"id\": 1, \"name\": \"Chair\", \"price\": 100}, {\"id\": 2, \"name\": \"Table\", \"price\": 150}]"
+                        }
+                    ]
+                },
+                {
+                    "name": "Create Product",
+                    "description": "Add a new product.",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\": \"Sofa\", \"description\": \"Comfortable sofa\", \"price\": 300}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/api/products",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["api", "products"]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Create Product response",
+                            "originalRequest": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "{{baseUrl}}/api/products",
+                                    "host": ["{{baseUrl}}"],
+                                    "path": ["api", "products"]
+                                }
+                            },
+                            "code": 201,
+                            "body": "{\"id\": 3, \"name\": \"Sofa\", \"description\": \"Comfortable sofa\", \"price\": 300}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Get Product Details",
+                    "description": "Retrieve the details of a specific product.",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/api/products/:id",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["api", "products", ":id"],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "Product ID"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Get Product Details response",
+                            "originalRequest": {
+                                "method": "GET",
+                                "url": {
+                                    "raw": "{{baseUrl}}/api/products/:id",
+                                    "host": ["{{baseUrl}}"],
+                                    "path": ["api", "products", ":id"]
+                                }
+                            },
+                            "code": 200,
+                            "body": "{\"id\": 1, \"name\": \"Chair\", \"price\": 100}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Update Product",
+                    "description": "Update the details of a specific product.",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\": \"Updated Chair\", \"price\": 120}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/api/products/:id",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["api", "products", ":id"],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "Product ID"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Update Product response",
+                            "originalRequest": {
+                                "method": "PUT",
+                                "url": {
+                                    "raw": "{{baseUrl}}/api/products/:id",
+                                    "host": ["{{baseUrl}}"],
+                                    "path": ["api", "products", ":id"]
+                                }
+                            },
+                            "code": 200,
+                            "body": "{\"id\": 1, \"name\": \"Updated Chair\", \"price\": 120}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Delete Product",
+                    "description": "Remove a specific product.",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/api/products/:id",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["api", "products", ":id"],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "Product ID"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Delete Product response",
+                            "originalRequest": {
+                                "method": "DELETE",
+                                "url": {
+                                    "raw": "{{baseUrl}}/api/products/:id",
+                                    "host": ["{{baseUrl}}"],
+                                    "path": ["api", "products", ":id"]
+                                }
+                            },
+                            "code": 204,
+                            "body": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "bearer",
+        "bearer": [
+            {
+                "key": "Authorization",
+                "value": "2|r3KyGeSmk4HgXUDclvAcxIiqfDnf25vJHJpsHTpu",
+                "type": "string"
+            }
+        ]
+    },
+    "variable": [
+        {
+            "key": "baseUrl",
+            "value": "http://localhost:8000",
+            "type": "string"
+        },
+        {
+            "key": "token",
+            "value": "2|r3KyGeSmk4HgXUDclvAcxIiqfDnf25vJHJpsHTpu",
+            "type": "string"
+        }
+    ]
+}
