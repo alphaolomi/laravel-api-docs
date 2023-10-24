@@ -9,12 +9,12 @@ class HealthController extends Controller
 {
     public function __invoke()
     {
-        return [
+        return response()->json( [
             'status' => 'up',
             'services' => [
                 'database' => 'up',
                 'redis' => 'up',
             ],
-        ];
+        ]);
     }
 }
