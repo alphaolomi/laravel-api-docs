@@ -22,7 +22,9 @@ class ProductController extends Controller
 
     /**
      * Store a newly created resource in storage.
-     */
+     *
+     * @bodyParam cover_image file required The Cover Image.
+    */
     public function store(StoreProductRequest $request)
     {
         return ProductResource::make(Product::create($request->validated()));

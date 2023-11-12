@@ -1,0 +1,46 @@
+name: 'Health Checks'
+description: 'APIs for health checks'
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/health-check
+    metadata:
+      groupName: 'Health Checks'
+      groupDescription: 'APIs for health checks'
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer secret'
+    controller: null
+    method: null
+    route: null
+    custom: []

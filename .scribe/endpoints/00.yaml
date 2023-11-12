@@ -1,0 +1,148 @@
+name: Authentication
+description: 'APIs for authentication'
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/login
+    metadata:
+      groupName: Authentication
+      groupDescription: 'APIs for authentication'
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Login the user'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'The Email of the user.'
+        required: true
+        example: user@example.com
+        type: string
+        enumValues: []
+        custom: []
+      password:
+        name: password
+        description: 'The password of the user.'
+        required: true
+        example: password
+        type: string
+        enumValues: []
+        custom: []
+    cleanBodyParameters:
+      email: user@example.com
+      password: password
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"access_token":"1|0M0VCKSJam4zQU058p3ZJ4GXCiDCWYkCyJflPegA","user":{"id":1,"name":"John Doe","email":"johndoe@example.com"}}'
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/register
+    metadata:
+      groupName: Authentication
+      groupDescription: 'APIs for authentication'
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Register a user'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'The name of the user.'
+        required: true
+        example: 'John Doe'
+        type: string
+        enumValues: []
+        custom: []
+      email:
+        name: email
+        description: 'The Email of the user.'
+        required: true
+        example: user@example.com
+        type: string
+        enumValues: []
+        custom: []
+      password:
+        name: password
+        description: 'The password of the user.'
+        required: true
+        example: password
+        type: string
+        enumValues: []
+        custom: []
+    cleanBodyParameters:
+      name: 'John Doe'
+      email: user@example.com
+      password: password
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/logout
+    metadata:
+      groupName: Authentication
+      groupDescription: 'APIs for authentication'
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Logout the user'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer secret'
+    controller: null
+    method: null
+    route: null
+    custom: []

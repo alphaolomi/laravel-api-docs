@@ -1,0 +1,307 @@
+openapi: 3.0.3
+info:
+  title: 'Products API'
+  description: 'This is a sample API for a products catalog.'
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost:8000'
+paths:
+  /api/login:
+    post:
+      summary: 'Login the user'
+      operationId: loginTheUser
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  access_token: 1|0M0VCKSJam4zQU058p3ZJ4GXCiDCWYkCyJflPegA
+                  user:
+                    id: 1
+                    name: 'John Doe'
+                    email: johndoe@example.com
+                properties:
+                  access_token:
+                    type: string
+                    example: 1|0M0VCKSJam4zQU058p3ZJ4GXCiDCWYkCyJflPegA
+                  user:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 1
+                      name:
+                        type: string
+                        example: 'John Doe'
+                      email:
+                        type: string
+                        example: johndoe@example.com
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'The Email of the user.'
+                  example: user@example.com
+                password:
+                  type: string
+                  description: 'The password of the user.'
+                  example: password
+              required:
+                - email
+                - password
+      security: []
+  /api/register:
+    post:
+      summary: 'Register a user'
+      operationId: registerAUser
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'The name of the user.'
+                  example: 'John Doe'
+                email:
+                  type: string
+                  description: 'The Email of the user.'
+                  example: user@example.com
+                password:
+                  type: string
+                  description: 'The password of the user.'
+                  example: password
+              required:
+                - name
+                - email
+                - password
+      security: []
+  /api/logout:
+    post:
+      summary: 'Logout the user'
+      operationId: logoutTheUser
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Authentication
+  /api/user:
+    get:
+      summary: ''
+      operationId: getApiUser
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+  /api/health-check:
+    get:
+      summary: ''
+      operationId: getApiHealthCheck
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'Health Checks'
+  /api/products:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Products
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Products
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'The name of the product. Must not be greater than 255 characters.'
+                  example: 'Product name'
+                description:
+                  type: string
+                  description: 'The description of the product.'
+                  example: 'Product description'
+                price:
+                  type: string
+                  description: 'The price of the product.'
+                  example: 100
+                is_active:
+                  type: boolean
+                  description: 'The status of the product.'
+                  example: false
+                cover_image:
+                  type: string
+                  format: binary
+                  description: 'The Cover Image.'
+              required:
+                - name
+                - price
+                - cover_image
+  '/api/products/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Products
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Products
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'The name of the product. Must not be greater than 255 characters.'
+                  example: 'Product name'
+                description:
+                  type: string
+                  description: 'The description of the product.'
+                  example: 'Product description'
+                price:
+                  type: string
+                  description: 'The price of the product.'
+                  example: 100
+                is_active:
+                  type: boolean
+                  description: 'The status of the product.'
+                  example: false
+                cover_image:
+                  type: string
+                  description: 'The cover image of the product.'
+                  example: 'https://example.com/image.jpg'
+              required:
+                - name
+                - price
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Products
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the product.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+tags:
+  -
+    name: Authentication
+    description: 'APIs for authentication'
+  -
+    name: Endpoints
+    description: ''
+  -
+    name: 'Health Checks'
+    description: 'APIs for health checks'
+  -
+    name: Products
+    description: 'APIs for products'
+components:
+  securitySchemes:
+    default:
+      type: http
+      scheme: bearer
+      description: 'You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.'
+security:
+  -
+    default: []
