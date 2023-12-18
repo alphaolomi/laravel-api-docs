@@ -8850,16 +8850,16 @@
         },
         {
             "name": "nunomaduro/larastan",
-            "version": "v2.6.5",
+            "version": "v2.7.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/nunomaduro/larastan.git",
-                "reference": "51028c0aba0d8756f7d9e9972ed74e7d34976958"
+                "url": "https://github.com/larastan/larastan.git",
+                "reference": "a2610d46b9999cf558d9900ccb641962d1442f55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nunomaduro/larastan/zipball/51028c0aba0d8756f7d9e9972ed74e7d34976958",
-                "reference": "51028c0aba0d8756f7d9e9972ed74e7d34976958",
+                "url": "https://api.github.com/repos/larastan/larastan/zipball/a2610d46b9999cf558d9900ccb641962d1442f55",
+                "reference": "a2610d46b9999cf558d9900ccb641962d1442f55",
                 "shasum": ""
             },
             "require": {
@@ -8897,7 +8897,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "NunoMaduro\\Larastan\\": "src/"
+                    "Larastan\\Larastan\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -8905,6 +8905,10 @@
                 "MIT"
             ],
             "authors": [
+                {
+                    "name": "Can Vural",
+                    "email": "can9119@gmail.com"
+                },
                 {
                     "name": "Nuno Maduro",
                     "email": "enunomaduro@gmail.com"
@@ -8922,8 +8926,8 @@
                 "static analysis"
             ],
             "support": {
-                "issues": "https://github.com/nunomaduro/larastan/issues",
-                "source": "https://github.com/nunomaduro/larastan/tree/v2.6.5"
+                "issues": "https://github.com/larastan/larastan/issues",
+                "source": "https://github.com/larastan/larastan/tree/v2.7.0"
             },
             "funding": [
                 {
@@ -8943,7 +8947,8 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2023-11-17T10:17:33+00:00"
+            "abandoned": "larastan/larastan",
+            "time": "2023-12-04T19:21:38+00:00"
         },
         {
             "name": "pestphp/pest",
@@ -9664,16 +9669,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.10.47",
+            "version": "1.10.50",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "84dbb33b520ea28b6cf5676a3941f4bae1c1ff39"
+                "reference": "06a98513ac72c03e8366b5a0cb00750b487032e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/84dbb33b520ea28b6cf5676a3941f4bae1c1ff39",
-                "reference": "84dbb33b520ea28b6cf5676a3941f4bae1c1ff39",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/06a98513ac72c03e8366b5a0cb00750b487032e4",
+                "reference": "06a98513ac72c03e8366b5a0cb00750b487032e4",
                 "shasum": ""
             },
             "require": {
@@ -9722,7 +9727,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-12-01T15:19:17+00:00"
+            "time": "2023-12-13T10:59:42+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
