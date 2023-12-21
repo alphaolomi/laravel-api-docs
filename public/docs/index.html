@@ -1347,6 +1347,78 @@ fetch(url, {
                                 </div>
                                                     </div>
                     
+                                            <div class="sl-panel sl-outline-none sl-w-full sl-rounded-lg">
+                            <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-3 sl-pl-4 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-select-none">
+                                <div class="sl-flex sl-flex-1 sl-items-center sl-py-2">
+                                    <div class="sl--ml-2">
+                                        <div class="sl-h-sm sl-text-base sl-font-medium sl-px-1.5 sl-text-muted sl-rounded sl-border-transparent sl-border">
+                                            <div class="sl-mb-2 sl-inline-block">Response sample:</div>
+                                            <div class="sl-mb-2 sl-inline-block">
+                                                <select
+                                                        class="example-response-POSTapi-register-toggle sl-text-base"
+                                                        aria-label="Response sample"
+                                                        onchange="switchExampleResponse('POSTapi-register', event.target.value);">
+                                                                                                            <option value="0">422</option>
+                                                                                                    </select></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button"
+                                        class="sl-button sl-h-sm sl-text-base sl-font-medium sl-px-1.5 hover:sl-bg-canvas-50 active:sl-bg-canvas-100 sl-text-muted hover:sl-text-body focus:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70">
+                                    <div class="sl-mx-0">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copy"
+                                             class="svg-inline--fa fa-copy fa-fw fa-sm sl-icon" role="img"
+                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                  d="M384 96L384 0h-112c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48H464c26.51 0 48-21.49 48-48V128h-95.1C398.4 128 384 113.6 384 96zM416 0v96h96L416 0zM192 352V128h-144c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48h192c26.51 0 48-21.49 48-48L288 416h-32C220.7 416 192 387.3 192 352z"></path>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-register example-response-POSTapi-register-0"
+                                     style=" "
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                            <details class="sl-pl-2">
+                                                <summary style="cursor: pointer; list-style: none;">
+                                                    <small>
+                                                        <span class="expansion-chevrons">
+
+    <svg aria-hidden="true" focusable="false" data-prefix="fas"
+         data-icon="chevron-right"
+         class="svg-inline--fa fa-chevron-right fa-fw sl-icon sl-text-muted"
+         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+        <path fill="currentColor"
+              d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"></path>
+    </svg>
+                                                            </span>
+                                                        Headers
+                                                    </small>
+                                                </summary>
+                                                <pre><code class="language-http">                                                            cache-control
+                                                            : no-cache, private
+                                                                                                                    content-type
+                                                            : application/json
+                                                                                                                    x-ratelimit-limit
+                                                            : 60
+                                                                                                                    x-ratelimit-remaining
+                                                            : 59
+                                                                                                                    access-control-allow-origin
+                                                            : *
+                                                         </code></pre>
+                                            </details>
+                                                                                                                                                                        
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;message&quot;: &quot;The email has already been taken.&quot;,
+    &quot;errors&quot;: {
+        &quot;email&quot;: [
+            &quot;The email has already been taken.&quot;
+        ]
+    }
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                    </div>
                             </div>
     </div>
 </div>
@@ -1674,6 +1746,67 @@ fetch(url, {
                                 </div>
                                                     </div>
                     
+                                            <div class="sl-panel sl-outline-none sl-w-full sl-rounded-lg">
+                            <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-3 sl-pl-4 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-select-none">
+                                <div class="sl-flex sl-flex-1 sl-items-center sl-py-2">
+                                    <div class="sl--ml-2">
+                                        <div class="sl-h-sm sl-text-base sl-font-medium sl-px-1.5 sl-text-muted sl-rounded sl-border-transparent sl-border">
+                                            <div class="sl-mb-2 sl-inline-block">Response sample:</div>
+                                            <div class="sl-mb-2 sl-inline-block">
+                                                <select
+                                                        class="example-response-POSTapi-logout-toggle sl-text-base"
+                                                        aria-label="Response sample"
+                                                        onchange="switchExampleResponse('POSTapi-logout', event.target.value);">
+                                                                                                            <option value="0">204</option>
+                                                                                                    </select></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button"
+                                        class="sl-button sl-h-sm sl-text-base sl-font-medium sl-px-1.5 hover:sl-bg-canvas-50 active:sl-bg-canvas-100 sl-text-muted hover:sl-text-body focus:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70">
+                                    <div class="sl-mx-0">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copy"
+                                             class="svg-inline--fa fa-copy fa-fw fa-sm sl-icon" role="img"
+                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                  d="M384 96L384 0h-112c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48H464c26.51 0 48-21.49 48-48V128h-95.1C398.4 128 384 113.6 384 96zM416 0v96h96L416 0zM192 352V128h-144c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48h192c26.51 0 48-21.49 48-48L288 416h-32C220.7 416 192 387.3 192 352z"></path>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-logout example-response-POSTapi-logout-0"
+                                     style=" "
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                            <details class="sl-pl-2">
+                                                <summary style="cursor: pointer; list-style: none;">
+                                                    <small>
+                                                        <span class="expansion-chevrons">
+
+    <svg aria-hidden="true" focusable="false" data-prefix="fas"
+         data-icon="chevron-right"
+         class="svg-inline--fa fa-chevron-right fa-fw sl-icon sl-text-muted"
+         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+        <path fill="currentColor"
+              d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"></path>
+    </svg>
+                                                            </span>
+                                                        Headers
+                                                    </small>
+                                                </summary>
+                                                <pre><code class="language-http">                                                            cache-control
+                                                            : no-cache, private
+                                                                                                                    x-ratelimit-limit
+                                                            : 60
+                                                                                                                    x-ratelimit-remaining
+                                                            : 57
+                                                                                                                    access-control-allow-origin
+                                                            : *
+                                                         </code></pre>
+                                            </details>
+                                                                                                                            <pre><code>[Empty response]</code></pre>
+                                                                            </div>
+                                </div>
+                                                    </div>
                             </div>
     </div>
 </div>
@@ -2020,7 +2153,7 @@ fetch(url, {
                                                         class="example-response-GETapi-user-toggle sl-text-base"
                                                         aria-label="Response sample"
                                                         onchange="switchExampleResponse('GETapi-user', event.target.value);">
-                                                                                                            <option value="0">401</option>
+                                                                                                            <option value="0">200</option>
                                                                                                     </select></div>
                                         </div>
                                     </div>
@@ -2060,6 +2193,10 @@ fetch(url, {
                                                             : no-cache, private
                                                                                                                     content-type
                                                             : application/json
+                                                                                                                    x-ratelimit-limit
+                                                            : 60
+                                                                                                                    x-ratelimit-remaining
+                                                            : 59
                                                                                                                     access-control-allow-origin
                                                             : *
                                                          </code></pre>
@@ -2067,7 +2204,12 @@ fetch(url, {
                                                                                                                                                                         
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
-    &quot;message&quot;: &quot;Unauthenticated.&quot;
+    &quot;id&quot;: 2,
+    &quot;name&quot;: &quot;John Doe&quot;,
+    &quot;email&quot;: &quot;user@example.com&quot;,
+    &quot;email_verified_at&quot;: null,
+    &quot;created_at&quot;: &quot;2023-11-12T12:04:40.000000Z&quot;,
+    &quot;updated_at&quot;: &quot;2023-11-12T12:04:40.000000Z&quot;
 }</code></pre>
                                                                             </div>
                                 </div>
@@ -2418,7 +2560,7 @@ fetch(url, {
                                                         class="example-response-GETapi-health-check-toggle sl-text-base"
                                                         aria-label="Response sample"
                                                         onchange="switchExampleResponse('GETapi-health-check', event.target.value);">
-                                                                                                            <option value="0">401</option>
+                                                                                                            <option value="0">200</option>
                                                                                                     </select></div>
                                         </div>
                                     </div>
@@ -2458,6 +2600,10 @@ fetch(url, {
                                                             : no-cache, private
                                                                                                                     content-type
                                                             : application/json
+                                                                                                                    x-ratelimit-limit
+                                                            : 60
+                                                                                                                    x-ratelimit-remaining
+                                                            : 58
                                                                                                                     access-control-allow-origin
                                                             : *
                                                          </code></pre>
@@ -2465,7 +2611,11 @@ fetch(url, {
                                                                                                                                                                         
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
-    &quot;message&quot;: &quot;Unauthenticated.&quot;
+    &quot;status&quot;: &quot;up&quot;,
+    &quot;services&quot;: {
+        &quot;database&quot;: &quot;up&quot;,
+        &quot;redis&quot;: &quot;up&quot;
+    }
 }</code></pre>
                                                                             </div>
                                 </div>
@@ -2816,7 +2966,7 @@ fetch(url, {
                                                         class="example-response-GETapi-products-toggle sl-text-base"
                                                         aria-label="Response sample"
                                                         onchange="switchExampleResponse('GETapi-products', event.target.value);">
-                                                                                                            <option value="0">401</option>
+                                                                                                            <option value="0">200</option>
                                                                                                     </select></div>
                                         </div>
                                     </div>
@@ -2856,6 +3006,10 @@ fetch(url, {
                                                             : no-cache, private
                                                                                                                     content-type
                                                             : application/json
+                                                                                                                    x-ratelimit-limit
+                                                            : 60
+                                                                                                                    x-ratelimit-remaining
+                                                            : 56
                                                                                                                     access-control-allow-origin
                                                             : *
                                                          </code></pre>
@@ -2863,7 +3017,138 @@ fetch(url, {
                                                                                                                                                                         
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
-    &quot;message&quot;: &quot;Unauthenticated.&quot;
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;name&quot;: &quot;Recusandae illum iusto.&quot;,
+            &quot;description&quot;: &quot;Quo nisi esse eum delectus tenetur. Vero nostrum ullam eaque autem voluptatem. Eaque temporibus ut minima qui eveniet consequatur.&quot;,
+            &quot;price&quot;: {
+                &quot;amount&quot;: &quot;24921235&quot;,
+                &quot;currency&quot;: &quot;USD&quot;,
+                &quot;formatted&quot;: &quot;$249,212.35&quot;
+            },
+            &quot;cover_image&quot;: &quot;https://via.placeholder.com/640x480.png/00eebb?text=products+Shopify&quot;,
+            &quot;created_at&quot;: &quot;2023-11-12T11:41:19.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-11-12T11:41:19.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 2,
+            &quot;name&quot;: &quot;Aut consequatur eum aspernatur.&quot;,
+            &quot;description&quot;: &quot;Quis voluptatem quidem nostrum laudantium. Molestiae rerum velit consequatur dolorem similique molestiae dignissimos. Suscipit et corrupti odit expedita. Eum voluptatum est atque inventore beatae voluptatem. Quas autem voluptatem occaecati. In rerum distinctio expedita rerum quis autem.&quot;,
+            &quot;price&quot;: {
+                &quot;amount&quot;: &quot;21405259&quot;,
+                &quot;currency&quot;: &quot;USD&quot;,
+                &quot;formatted&quot;: &quot;$214,052.59&quot;
+            },
+            &quot;cover_image&quot;: &quot;https://via.placeholder.com/640x480.png/00aa66?text=products+Shopify&quot;,
+            &quot;created_at&quot;: &quot;2023-11-12T11:41:19.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-11-12T11:41:19.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 3,
+            &quot;name&quot;: &quot;Qui voluptatum libero.&quot;,
+            &quot;description&quot;: &quot;Nihil est et necessitatibus aut. Eos quaerat ratione et atque consectetur. Doloremque voluptate nihil alias nam neque. Tempora repudiandae voluptate consequatur iusto sit et dolor. Et velit eligendi dolorem quam. Minima ratione a aliquam tempore.&quot;,
+            &quot;price&quot;: {
+                &quot;amount&quot;: &quot;19768850&quot;,
+                &quot;currency&quot;: &quot;USD&quot;,
+                &quot;formatted&quot;: &quot;$197,688.50&quot;
+            },
+            &quot;cover_image&quot;: &quot;https://via.placeholder.com/640x480.png/002255?text=products+Shopify&quot;,
+            &quot;created_at&quot;: &quot;2023-11-12T11:41:19.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-11-12T11:41:19.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;name&quot;: &quot;Sed autem et corrupti.&quot;,
+            &quot;description&quot;: &quot;Praesentium quia recusandae vel nihil impedit. Quis perferendis facilis ipsam. Explicabo exercitationem omnis atque et facilis dolorem aut minus. Aut ex vel aliquam cum. Eos sunt sunt et repellat ut facere. Ad repellat sapiente ut.&quot;,
+            &quot;price&quot;: {
+                &quot;amount&quot;: &quot;2830961&quot;,
+                &quot;currency&quot;: &quot;USD&quot;,
+                &quot;formatted&quot;: &quot;$28,309.61&quot;
+            },
+            &quot;cover_image&quot;: &quot;https://via.placeholder.com/640x480.png/008877?text=products+Shopify&quot;,
+            &quot;created_at&quot;: &quot;2023-11-12T11:41:19.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-11-12T11:41:19.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 5,
+            &quot;name&quot;: &quot;Aut aut enim.&quot;,
+            &quot;description&quot;: &quot;Dolore illum repellendus rerum doloribus doloribus explicabo. Magni at voluptatem dolores architecto. Ea voluptatem dolorem deserunt culpa eos vel. Laborum suscipit dicta voluptatem enim impedit totam quas.&quot;,
+            &quot;price&quot;: {
+                &quot;amount&quot;: &quot;8516908&quot;,
+                &quot;currency&quot;: &quot;USD&quot;,
+                &quot;formatted&quot;: &quot;$85,169.08&quot;
+            },
+            &quot;cover_image&quot;: &quot;https://via.placeholder.com/640x480.png/00bbaa?text=products+Shopify&quot;,
+            &quot;created_at&quot;: &quot;2023-11-12T11:41:19.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-11-12T11:41:19.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 6,
+            &quot;name&quot;: &quot;Et tenetur temporibus et.&quot;,
+            &quot;description&quot;: &quot;Quo nesciunt impedit sit totam. Minima reprehenderit et quia praesentium quos. Accusamus aut architecto molestiae doloribus atque recusandae sed. Vel molestiae hic laboriosam fuga vero quia corrupti consequatur. Facere nisi quos sunt in id provident qui. Nam aspernatur aliquid tempora ab laboriosam.&quot;,
+            &quot;price&quot;: {
+                &quot;amount&quot;: &quot;4175922&quot;,
+                &quot;currency&quot;: &quot;USD&quot;,
+                &quot;formatted&quot;: &quot;$41,759.22&quot;
+            },
+            &quot;cover_image&quot;: &quot;https://via.placeholder.com/640x480.png/00dd33?text=products+Shopify&quot;,
+            &quot;created_at&quot;: &quot;2023-11-12T11:41:19.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-11-12T11:41:19.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 7,
+            &quot;name&quot;: &quot;Debitis reiciendis doloribus.&quot;,
+            &quot;description&quot;: &quot;Eos facere saepe doloremque. Molestiae rerum soluta autem ad beatae ea architecto. Modi delectus rem veniam nisi nostrum dolor eveniet. Consectetur ab ut voluptas nesciunt omnis fuga distinctio. Sit architecto fugiat doloremque voluptatem facere ut adipisci.&quot;,
+            &quot;price&quot;: {
+                &quot;amount&quot;: &quot;11859183&quot;,
+                &quot;currency&quot;: &quot;USD&quot;,
+                &quot;formatted&quot;: &quot;$118,591.83&quot;
+            },
+            &quot;cover_image&quot;: &quot;https://via.placeholder.com/640x480.png/00ee77?text=products+Shopify&quot;,
+            &quot;created_at&quot;: &quot;2023-11-12T11:41:19.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-11-12T11:41:19.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 8,
+            &quot;name&quot;: &quot;Ea quaerat repellendus.&quot;,
+            &quot;description&quot;: &quot;Ducimus perferendis eveniet error doloremque omnis tempora consectetur. Eum minima nihil et. Necessitatibus et nisi voluptatem velit. Ipsa mollitia blanditiis cumque aperiam est.&quot;,
+            &quot;price&quot;: {
+                &quot;amount&quot;: &quot;18366881&quot;,
+                &quot;currency&quot;: &quot;USD&quot;,
+                &quot;formatted&quot;: &quot;$183,668.81&quot;
+            },
+            &quot;cover_image&quot;: &quot;https://via.placeholder.com/640x480.png/00bb00?text=products+Shopify&quot;,
+            &quot;created_at&quot;: &quot;2023-11-12T11:41:19.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-11-12T11:41:19.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 9,
+            &quot;name&quot;: &quot;Hic autem.&quot;,
+            &quot;description&quot;: &quot;Quis cumque quo fuga et dolores voluptatem cumque. Facere vel dolores est necessitatibus est. Ipsam odio explicabo vel ipsum vel. Qui quam est facere quis. Suscipit reiciendis velit molestiae. Vel totam modi corporis pariatur labore.&quot;,
+            &quot;price&quot;: {
+                &quot;amount&quot;: &quot;2121386&quot;,
+                &quot;currency&quot;: &quot;USD&quot;,
+                &quot;formatted&quot;: &quot;$21,213.86&quot;
+            },
+            &quot;cover_image&quot;: &quot;https://via.placeholder.com/640x480.png/004400?text=products+Shopify&quot;,
+            &quot;created_at&quot;: &quot;2023-11-12T11:41:19.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-11-12T11:41:19.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 10,
+            &quot;name&quot;: &quot;Accusamus non dolorem expedita vel.&quot;,
+            &quot;description&quot;: &quot;Itaque quia perferendis consequatur est ipsam maiores. Optio doloremque nam quae autem molestiae. Aut voluptas saepe assumenda blanditiis rerum neque quia.&quot;,
+            &quot;price&quot;: {
+                &quot;amount&quot;: &quot;20207198&quot;,
+                &quot;currency&quot;: &quot;USD&quot;,
+                &quot;formatted&quot;: &quot;$202,071.98&quot;
+            },
+            &quot;cover_image&quot;: &quot;https://via.placeholder.com/640x480.png/000044?text=products+Shopify&quot;,
+            &quot;created_at&quot;: &quot;2023-11-12T11:41:19.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-11-12T11:41:19.000000Z&quot;
+        }
+    ]
 }</code></pre>
                                                                             </div>
                                 </div>
@@ -3095,7 +3380,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        C:\Users\User\AppData\Local\Temp\php3857.tmp
+                        C:\Users\User\AppData\Local\Temp\phpDF15.tmp
                     </div>
                 </div>
             </div>
@@ -3389,7 +3674,7 @@ fetch(url, {
     --form "description=Product description" \
     --form "price=100" \
     --form "is_active=" \
-    --form "cover_image=@C:\Users\User\AppData\Local\Temp\php3857.tmp" </code></pre>                                        </div>
+    --form "cover_image=@C:\Users\User\AppData\Local\Temp\phpDF15.tmp" </code></pre>                                        </div>
                                     </div>
                                 </div>
                                                             <div class="sl-bg-canvas-100 example-request example-request-javascript"
@@ -3422,6 +3707,78 @@ fetch(url, {
                                 </div>
                                                     </div>
                     
+                                            <div class="sl-panel sl-outline-none sl-w-full sl-rounded-lg">
+                            <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-3 sl-pl-4 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-select-none">
+                                <div class="sl-flex sl-flex-1 sl-items-center sl-py-2">
+                                    <div class="sl--ml-2">
+                                        <div class="sl-h-sm sl-text-base sl-font-medium sl-px-1.5 sl-text-muted sl-rounded sl-border-transparent sl-border">
+                                            <div class="sl-mb-2 sl-inline-block">Response sample:</div>
+                                            <div class="sl-mb-2 sl-inline-block">
+                                                <select
+                                                        class="example-response-POSTapi-products-toggle sl-text-base"
+                                                        aria-label="Response sample"
+                                                        onchange="switchExampleResponse('POSTapi-products', event.target.value);">
+                                                                                                            <option value="0">422</option>
+                                                                                                    </select></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button"
+                                        class="sl-button sl-h-sm sl-text-base sl-font-medium sl-px-1.5 hover:sl-bg-canvas-50 active:sl-bg-canvas-100 sl-text-muted hover:sl-text-body focus:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70">
+                                    <div class="sl-mx-0">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copy"
+                                             class="svg-inline--fa fa-copy fa-fw fa-sm sl-icon" role="img"
+                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                  d="M384 96L384 0h-112c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48H464c26.51 0 48-21.49 48-48V128h-95.1C398.4 128 384 113.6 384 96zM416 0v96h96L416 0zM192 352V128h-144c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48h192c26.51 0 48-21.49 48-48L288 416h-32C220.7 416 192 387.3 192 352z"></path>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-products example-response-POSTapi-products-0"
+                                     style=" "
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                            <details class="sl-pl-2">
+                                                <summary style="cursor: pointer; list-style: none;">
+                                                    <small>
+                                                        <span class="expansion-chevrons">
+
+    <svg aria-hidden="true" focusable="false" data-prefix="fas"
+         data-icon="chevron-right"
+         class="svg-inline--fa fa-chevron-right fa-fw sl-icon sl-text-muted"
+         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+        <path fill="currentColor"
+              d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"></path>
+    </svg>
+                                                            </span>
+                                                        Headers
+                                                    </small>
+                                                </summary>
+                                                <pre><code class="language-http">                                                            cache-control
+                                                            : no-cache, private
+                                                                                                                    content-type
+                                                            : application/json
+                                                                                                                    x-ratelimit-limit
+                                                            : 60
+                                                                                                                    x-ratelimit-remaining
+                                                            : 55
+                                                                                                                    access-control-allow-origin
+                                                            : *
+                                                         </code></pre>
+                                            </details>
+                                                                                                                                                                        
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;message&quot;: &quot;The cover image field must be a valid URL.&quot;,
+    &quot;errors&quot;: {
+        &quot;cover_image&quot;: [
+            &quot;The cover image field must be a valid URL.&quot;
+        ]
+    }
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                    </div>
                             </div>
     </div>
 </div>
@@ -3823,7 +4180,7 @@ fetch(url, {
                                                         class="example-response-GETapi-products--id--toggle sl-text-base"
                                                         aria-label="Response sample"
                                                         onchange="switchExampleResponse('GETapi-products--id-', event.target.value);">
-                                                                                                            <option value="0">401</option>
+                                                                                                            <option value="0">200</option>
                                                                                                     </select></div>
                                         </div>
                                     </div>
@@ -3863,6 +4220,10 @@ fetch(url, {
                                                             : no-cache, private
                                                                                                                     content-type
                                                             : application/json
+                                                                                                                    x-ratelimit-limit
+                                                            : 60
+                                                                                                                    x-ratelimit-remaining
+                                                            : 54
                                                                                                                     access-control-allow-origin
                                                             : *
                                                          </code></pre>
@@ -3870,7 +4231,19 @@ fetch(url, {
                                                                                                                                                                         
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
-    &quot;message&quot;: &quot;Unauthenticated.&quot;
+    &quot;data&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;Recusandae illum iusto.&quot;,
+        &quot;description&quot;: &quot;Quo nisi esse eum delectus tenetur. Vero nostrum ullam eaque autem voluptatem. Eaque temporibus ut minima qui eveniet consequatur.&quot;,
+        &quot;price&quot;: {
+            &quot;amount&quot;: &quot;24921235&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;formatted&quot;: &quot;$249,212.35&quot;
+        },
+        &quot;cover_image&quot;: &quot;https://via.placeholder.com/640x480.png/00eebb?text=products+Shopify&quot;,
+        &quot;created_at&quot;: &quot;2023-11-12T11:41:19.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-11-12T11:41:19.000000Z&quot;
+    }
 }</code></pre>
                                                                             </div>
                                 </div>
@@ -4445,6 +4818,85 @@ fetch(url, {
                                 </div>
                                                     </div>
                     
+                                            <div class="sl-panel sl-outline-none sl-w-full sl-rounded-lg">
+                            <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-3 sl-pl-4 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-select-none">
+                                <div class="sl-flex sl-flex-1 sl-items-center sl-py-2">
+                                    <div class="sl--ml-2">
+                                        <div class="sl-h-sm sl-text-base sl-font-medium sl-px-1.5 sl-text-muted sl-rounded sl-border-transparent sl-border">
+                                            <div class="sl-mb-2 sl-inline-block">Response sample:</div>
+                                            <div class="sl-mb-2 sl-inline-block">
+                                                <select
+                                                        class="example-response-PUTapi-products--id--toggle sl-text-base"
+                                                        aria-label="Response sample"
+                                                        onchange="switchExampleResponse('PUTapi-products--id-', event.target.value);">
+                                                                                                            <option value="0">200</option>
+                                                                                                    </select></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button"
+                                        class="sl-button sl-h-sm sl-text-base sl-font-medium sl-px-1.5 hover:sl-bg-canvas-50 active:sl-bg-canvas-100 sl-text-muted hover:sl-text-body focus:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70">
+                                    <div class="sl-mx-0">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copy"
+                                             class="svg-inline--fa fa-copy fa-fw fa-sm sl-icon" role="img"
+                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                  d="M384 96L384 0h-112c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48H464c26.51 0 48-21.49 48-48V128h-95.1C398.4 128 384 113.6 384 96zM416 0v96h96L416 0zM192 352V128h-144c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48h192c26.51 0 48-21.49 48-48L288 416h-32C220.7 416 192 387.3 192 352z"></path>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-PUTapi-products--id- example-response-PUTapi-products--id--0"
+                                     style=" "
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                            <details class="sl-pl-2">
+                                                <summary style="cursor: pointer; list-style: none;">
+                                                    <small>
+                                                        <span class="expansion-chevrons">
+
+    <svg aria-hidden="true" focusable="false" data-prefix="fas"
+         data-icon="chevron-right"
+         class="svg-inline--fa fa-chevron-right fa-fw sl-icon sl-text-muted"
+         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+        <path fill="currentColor"
+              d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"></path>
+    </svg>
+                                                            </span>
+                                                        Headers
+                                                    </small>
+                                                </summary>
+                                                <pre><code class="language-http">                                                            cache-control
+                                                            : no-cache, private
+                                                                                                                    content-type
+                                                            : application/json
+                                                                                                                    x-ratelimit-limit
+                                                            : 60
+                                                                                                                    x-ratelimit-remaining
+                                                            : 53
+                                                                                                                    access-control-allow-origin
+                                                            : *
+                                                         </code></pre>
+                                            </details>
+                                                                                                                                                                        
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;data&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;Product name&quot;,
+        &quot;description&quot;: &quot;Product description&quot;,
+        &quot;price&quot;: {
+            &quot;amount&quot;: &quot;100&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;formatted&quot;: &quot;$1.00&quot;
+        },
+        &quot;cover_image&quot;: &quot;https://example.com/image.jpg&quot;,
+        &quot;created_at&quot;: &quot;2023-11-12T11:41:19.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-11-12T12:05:32.000000Z&quot;
+    }
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                    </div>
                             </div>
     </div>
 </div>
@@ -4835,6 +5287,67 @@ fetch(url, {
                                 </div>
                                                     </div>
                     
+                                            <div class="sl-panel sl-outline-none sl-w-full sl-rounded-lg">
+                            <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-3 sl-pl-4 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-select-none">
+                                <div class="sl-flex sl-flex-1 sl-items-center sl-py-2">
+                                    <div class="sl--ml-2">
+                                        <div class="sl-h-sm sl-text-base sl-font-medium sl-px-1.5 sl-text-muted sl-rounded sl-border-transparent sl-border">
+                                            <div class="sl-mb-2 sl-inline-block">Response sample:</div>
+                                            <div class="sl-mb-2 sl-inline-block">
+                                                <select
+                                                        class="example-response-DELETEapi-products--id--toggle sl-text-base"
+                                                        aria-label="Response sample"
+                                                        onchange="switchExampleResponse('DELETEapi-products--id-', event.target.value);">
+                                                                                                            <option value="0">204</option>
+                                                                                                    </select></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button"
+                                        class="sl-button sl-h-sm sl-text-base sl-font-medium sl-px-1.5 hover:sl-bg-canvas-50 active:sl-bg-canvas-100 sl-text-muted hover:sl-text-body focus:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70">
+                                    <div class="sl-mx-0">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copy"
+                                             class="svg-inline--fa fa-copy fa-fw fa-sm sl-icon" role="img"
+                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                  d="M384 96L384 0h-112c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48H464c26.51 0 48-21.49 48-48V128h-95.1C398.4 128 384 113.6 384 96zM416 0v96h96L416 0zM192 352V128h-144c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48h192c26.51 0 48-21.49 48-48L288 416h-32C220.7 416 192 387.3 192 352z"></path>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-DELETEapi-products--id- example-response-DELETEapi-products--id--0"
+                                     style=" "
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                            <details class="sl-pl-2">
+                                                <summary style="cursor: pointer; list-style: none;">
+                                                    <small>
+                                                        <span class="expansion-chevrons">
+
+    <svg aria-hidden="true" focusable="false" data-prefix="fas"
+         data-icon="chevron-right"
+         class="svg-inline--fa fa-chevron-right fa-fw sl-icon sl-text-muted"
+         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+        <path fill="currentColor"
+              d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"></path>
+    </svg>
+                                                            </span>
+                                                        Headers
+                                                    </small>
+                                                </summary>
+                                                <pre><code class="language-http">                                                            cache-control
+                                                            : no-cache, private
+                                                                                                                    x-ratelimit-limit
+                                                            : 60
+                                                                                                                    x-ratelimit-remaining
+                                                            : 52
+                                                                                                                    access-control-allow-origin
+                                                            : *
+                                                         </code></pre>
+                                            </details>
+                                                                                                                            <pre><code>[Empty response]</code></pre>
+                                                                            </div>
+                                </div>
+                                                    </div>
                             </div>
     </div>
 </div>

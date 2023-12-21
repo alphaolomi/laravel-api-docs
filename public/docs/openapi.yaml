@@ -1,4 +1,4 @@
-openapi: 3.0.3
+openapi: "3.0.3"
 info:
   title: 'Products API'
   description: 'This is a sample API for a products catalog.'
@@ -69,7 +69,31 @@ paths:
       operationId: registerAUser
       description: ''
       parameters: []
-      responses: {  }
+      responses:
+        422:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'The email has already been taken.'
+                  errors:
+                    email:
+                      - 'The email has already been taken.'
+                properties:
+                  message:
+                    type: string
+                    example: 'The email has already been taken.'
+                  errors:
+                    type: object
+                    properties:
+                      email:
+                        type: array
+                        example:
+                          - 'The email has already been taken.'
+                        items:
+                          type: string
       tags:
         - Authentication
       requestBody:
@@ -102,7 +126,9 @@ paths:
       operationId: logoutTheUser
       description: ''
       parameters: []
-      responses: {  }
+      responses:
+        204:
+          description: ''
       tags:
         - Authentication
   /api/user:
@@ -112,18 +138,38 @@ paths:
       description: ''
       parameters: []
       responses:
-        401:
+        200:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: Unauthenticated.
+                  id: 2
+                  name: 'John Doe'
+                  email: user@example.com
+                  email_verified_at: null
+                  created_at: '2023-11-12T12:04:40.000000Z'
+                  updated_at: '2023-11-12T12:04:40.000000Z'
                 properties:
-                  message:
+                  id:
+                    type: integer
+                    example: 2
+                  name:
                     type: string
-                    example: Unauthenticated.
+                    example: 'John Doe'
+                  email:
+                    type: string
+                    example: user@example.com
+                  email_verified_at:
+                    type: string
+                    example: null
+                  created_at:
+                    type: string
+                    example: '2023-11-12T12:04:40.000000Z'
+                  updated_at:
+                    type: string
+                    example: '2023-11-12T12:04:40.000000Z'
       tags:
         - Endpoints
   /api/health-check:
@@ -133,18 +179,30 @@ paths:
       description: ''
       parameters: []
       responses:
-        401:
+        200:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: Unauthenticated.
+                  status: up
+                  services:
+                    database: up
+                    redis: up
                 properties:
-                  message:
+                  status:
                     type: string
-                    example: Unauthenticated.
+                    example: up
+                  services:
+                    type: object
+                    properties:
+                      database:
+                        type: string
+                        example: up
+                      redis:
+                        type: string
+                        example: up
       tags:
         - 'Health Checks'
   /api/products:
@@ -154,18 +212,271 @@ paths:
       description: ''
       parameters: []
       responses:
-        401:
+        200:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: Unauthenticated.
+                  data:
+                    -
+                      id: 1
+                      name: 'Recusandae illum iusto.'
+                      description: 'Quo nisi esse eum delectus tenetur. Vero nostrum ullam eaque autem voluptatem. Eaque temporibus ut minima qui eveniet consequatur.'
+                      price:
+                        amount: '24921235'
+                        currency: USD
+                        formatted: '$249,212.35'
+                      cover_image: 'https://via.placeholder.com/640x480.png/00eebb?text=products+Shopify'
+                      created_at: '2023-11-12T11:41:19.000000Z'
+                      updated_at: '2023-11-12T11:41:19.000000Z'
+                    -
+                      id: 2
+                      name: 'Aut consequatur eum aspernatur.'
+                      description: 'Quis voluptatem quidem nostrum laudantium. Molestiae rerum velit consequatur dolorem similique molestiae dignissimos. Suscipit et corrupti odit expedita. Eum voluptatum est atque inventore beatae voluptatem. Quas autem voluptatem occaecati. In rerum distinctio expedita rerum quis autem.'
+                      price:
+                        amount: '21405259'
+                        currency: USD
+                        formatted: '$214,052.59'
+                      cover_image: 'https://via.placeholder.com/640x480.png/00aa66?text=products+Shopify'
+                      created_at: '2023-11-12T11:41:19.000000Z'
+                      updated_at: '2023-11-12T11:41:19.000000Z'
+                    -
+                      id: 3
+                      name: 'Qui voluptatum libero.'
+                      description: 'Nihil est et necessitatibus aut. Eos quaerat ratione et atque consectetur. Doloremque voluptate nihil alias nam neque. Tempora repudiandae voluptate consequatur iusto sit et dolor. Et velit eligendi dolorem quam. Minima ratione a aliquam tempore.'
+                      price:
+                        amount: '19768850'
+                        currency: USD
+                        formatted: '$197,688.50'
+                      cover_image: 'https://via.placeholder.com/640x480.png/002255?text=products+Shopify'
+                      created_at: '2023-11-12T11:41:19.000000Z'
+                      updated_at: '2023-11-12T11:41:19.000000Z'
+                    -
+                      id: 4
+                      name: 'Sed autem et corrupti.'
+                      description: 'Praesentium quia recusandae vel nihil impedit. Quis perferendis facilis ipsam. Explicabo exercitationem omnis atque et facilis dolorem aut minus. Aut ex vel aliquam cum. Eos sunt sunt et repellat ut facere. Ad repellat sapiente ut.'
+                      price:
+                        amount: '2830961'
+                        currency: USD
+                        formatted: '$28,309.61'
+                      cover_image: 'https://via.placeholder.com/640x480.png/008877?text=products+Shopify'
+                      created_at: '2023-11-12T11:41:19.000000Z'
+                      updated_at: '2023-11-12T11:41:19.000000Z'
+                    -
+                      id: 5
+                      name: 'Aut aut enim.'
+                      description: 'Dolore illum repellendus rerum doloribus doloribus explicabo. Magni at voluptatem dolores architecto. Ea voluptatem dolorem deserunt culpa eos vel. Laborum suscipit dicta voluptatem enim impedit totam quas.'
+                      price:
+                        amount: '8516908'
+                        currency: USD
+                        formatted: '$85,169.08'
+                      cover_image: 'https://via.placeholder.com/640x480.png/00bbaa?text=products+Shopify'
+                      created_at: '2023-11-12T11:41:19.000000Z'
+                      updated_at: '2023-11-12T11:41:19.000000Z'
+                    -
+                      id: 6
+                      name: 'Et tenetur temporibus et.'
+                      description: 'Quo nesciunt impedit sit totam. Minima reprehenderit et quia praesentium quos. Accusamus aut architecto molestiae doloribus atque recusandae sed. Vel molestiae hic laboriosam fuga vero quia corrupti consequatur. Facere nisi quos sunt in id provident qui. Nam aspernatur aliquid tempora ab laboriosam.'
+                      price:
+                        amount: '4175922'
+                        currency: USD
+                        formatted: '$41,759.22'
+                      cover_image: 'https://via.placeholder.com/640x480.png/00dd33?text=products+Shopify'
+                      created_at: '2023-11-12T11:41:19.000000Z'
+                      updated_at: '2023-11-12T11:41:19.000000Z'
+                    -
+                      id: 7
+                      name: 'Debitis reiciendis doloribus.'
+                      description: 'Eos facere saepe doloremque. Molestiae rerum soluta autem ad beatae ea architecto. Modi delectus rem veniam nisi nostrum dolor eveniet. Consectetur ab ut voluptas nesciunt omnis fuga distinctio. Sit architecto fugiat doloremque voluptatem facere ut adipisci.'
+                      price:
+                        amount: '11859183'
+                        currency: USD
+                        formatted: '$118,591.83'
+                      cover_image: 'https://via.placeholder.com/640x480.png/00ee77?text=products+Shopify'
+                      created_at: '2023-11-12T11:41:19.000000Z'
+                      updated_at: '2023-11-12T11:41:19.000000Z'
+                    -
+                      id: 8
+                      name: 'Ea quaerat repellendus.'
+                      description: 'Ducimus perferendis eveniet error doloremque omnis tempora consectetur. Eum minima nihil et. Necessitatibus et nisi voluptatem velit. Ipsa mollitia blanditiis cumque aperiam est.'
+                      price:
+                        amount: '18366881'
+                        currency: USD
+                        formatted: '$183,668.81'
+                      cover_image: 'https://via.placeholder.com/640x480.png/00bb00?text=products+Shopify'
+                      created_at: '2023-11-12T11:41:19.000000Z'
+                      updated_at: '2023-11-12T11:41:19.000000Z'
+                    -
+                      id: 9
+                      name: 'Hic autem.'
+                      description: 'Quis cumque quo fuga et dolores voluptatem cumque. Facere vel dolores est necessitatibus est. Ipsam odio explicabo vel ipsum vel. Qui quam est facere quis. Suscipit reiciendis velit molestiae. Vel totam modi corporis pariatur labore.'
+                      price:
+                        amount: '2121386'
+                        currency: USD
+                        formatted: '$21,213.86'
+                      cover_image: 'https://via.placeholder.com/640x480.png/004400?text=products+Shopify'
+                      created_at: '2023-11-12T11:41:19.000000Z'
+                      updated_at: '2023-11-12T11:41:19.000000Z'
+                    -
+                      id: 10
+                      name: 'Accusamus non dolorem expedita vel.'
+                      description: 'Itaque quia perferendis consequatur est ipsam maiores. Optio doloremque nam quae autem molestiae. Aut voluptas saepe assumenda blanditiis rerum neque quia.'
+                      price:
+                        amount: '20207198'
+                        currency: USD
+                        formatted: '$202,071.98'
+                      cover_image: 'https://via.placeholder.com/640x480.png/000044?text=products+Shopify'
+                      created_at: '2023-11-12T11:41:19.000000Z'
+                      updated_at: '2023-11-12T11:41:19.000000Z'
                 properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        name: 'Recusandae illum iusto.'
+                        description: 'Quo nisi esse eum delectus tenetur. Vero nostrum ullam eaque autem voluptatem. Eaque temporibus ut minima qui eveniet consequatur.'
+                        price:
+                          amount: '24921235'
+                          currency: USD
+                          formatted: '$249,212.35'
+                        cover_image: 'https://via.placeholder.com/640x480.png/00eebb?text=products+Shopify'
+                        created_at: '2023-11-12T11:41:19.000000Z'
+                        updated_at: '2023-11-12T11:41:19.000000Z'
+                      -
+                        id: 2
+                        name: 'Aut consequatur eum aspernatur.'
+                        description: 'Quis voluptatem quidem nostrum laudantium. Molestiae rerum velit consequatur dolorem similique molestiae dignissimos. Suscipit et corrupti odit expedita. Eum voluptatum est atque inventore beatae voluptatem. Quas autem voluptatem occaecati. In rerum distinctio expedita rerum quis autem.'
+                        price:
+                          amount: '21405259'
+                          currency: USD
+                          formatted: '$214,052.59'
+                        cover_image: 'https://via.placeholder.com/640x480.png/00aa66?text=products+Shopify'
+                        created_at: '2023-11-12T11:41:19.000000Z'
+                        updated_at: '2023-11-12T11:41:19.000000Z'
+                      -
+                        id: 3
+                        name: 'Qui voluptatum libero.'
+                        description: 'Nihil est et necessitatibus aut. Eos quaerat ratione et atque consectetur. Doloremque voluptate nihil alias nam neque. Tempora repudiandae voluptate consequatur iusto sit et dolor. Et velit eligendi dolorem quam. Minima ratione a aliquam tempore.'
+                        price:
+                          amount: '19768850'
+                          currency: USD
+                          formatted: '$197,688.50'
+                        cover_image: 'https://via.placeholder.com/640x480.png/002255?text=products+Shopify'
+                        created_at: '2023-11-12T11:41:19.000000Z'
+                        updated_at: '2023-11-12T11:41:19.000000Z'
+                      -
+                        id: 4
+                        name: 'Sed autem et corrupti.'
+                        description: 'Praesentium quia recusandae vel nihil impedit. Quis perferendis facilis ipsam. Explicabo exercitationem omnis atque et facilis dolorem aut minus. Aut ex vel aliquam cum. Eos sunt sunt et repellat ut facere. Ad repellat sapiente ut.'
+                        price:
+                          amount: '2830961'
+                          currency: USD
+                          formatted: '$28,309.61'
+                        cover_image: 'https://via.placeholder.com/640x480.png/008877?text=products+Shopify'
+                        created_at: '2023-11-12T11:41:19.000000Z'
+                        updated_at: '2023-11-12T11:41:19.000000Z'
+                      -
+                        id: 5
+                        name: 'Aut aut enim.'
+                        description: 'Dolore illum repellendus rerum doloribus doloribus explicabo. Magni at voluptatem dolores architecto. Ea voluptatem dolorem deserunt culpa eos vel. Laborum suscipit dicta voluptatem enim impedit totam quas.'
+                        price:
+                          amount: '8516908'
+                          currency: USD
+                          formatted: '$85,169.08'
+                        cover_image: 'https://via.placeholder.com/640x480.png/00bbaa?text=products+Shopify'
+                        created_at: '2023-11-12T11:41:19.000000Z'
+                        updated_at: '2023-11-12T11:41:19.000000Z'
+                      -
+                        id: 6
+                        name: 'Et tenetur temporibus et.'
+                        description: 'Quo nesciunt impedit sit totam. Minima reprehenderit et quia praesentium quos. Accusamus aut architecto molestiae doloribus atque recusandae sed. Vel molestiae hic laboriosam fuga vero quia corrupti consequatur. Facere nisi quos sunt in id provident qui. Nam aspernatur aliquid tempora ab laboriosam.'
+                        price:
+                          amount: '4175922'
+                          currency: USD
+                          formatted: '$41,759.22'
+                        cover_image: 'https://via.placeholder.com/640x480.png/00dd33?text=products+Shopify'
+                        created_at: '2023-11-12T11:41:19.000000Z'
+                        updated_at: '2023-11-12T11:41:19.000000Z'
+                      -
+                        id: 7
+                        name: 'Debitis reiciendis doloribus.'
+                        description: 'Eos facere saepe doloremque. Molestiae rerum soluta autem ad beatae ea architecto. Modi delectus rem veniam nisi nostrum dolor eveniet. Consectetur ab ut voluptas nesciunt omnis fuga distinctio. Sit architecto fugiat doloremque voluptatem facere ut adipisci.'
+                        price:
+                          amount: '11859183'
+                          currency: USD
+                          formatted: '$118,591.83'
+                        cover_image: 'https://via.placeholder.com/640x480.png/00ee77?text=products+Shopify'
+                        created_at: '2023-11-12T11:41:19.000000Z'
+                        updated_at: '2023-11-12T11:41:19.000000Z'
+                      -
+                        id: 8
+                        name: 'Ea quaerat repellendus.'
+                        description: 'Ducimus perferendis eveniet error doloremque omnis tempora consectetur. Eum minima nihil et. Necessitatibus et nisi voluptatem velit. Ipsa mollitia blanditiis cumque aperiam est.'
+                        price:
+                          amount: '18366881'
+                          currency: USD
+                          formatted: '$183,668.81'
+                        cover_image: 'https://via.placeholder.com/640x480.png/00bb00?text=products+Shopify'
+                        created_at: '2023-11-12T11:41:19.000000Z'
+                        updated_at: '2023-11-12T11:41:19.000000Z'
+                      -
+                        id: 9
+                        name: 'Hic autem.'
+                        description: 'Quis cumque quo fuga et dolores voluptatem cumque. Facere vel dolores est necessitatibus est. Ipsam odio explicabo vel ipsum vel. Qui quam est facere quis. Suscipit reiciendis velit molestiae. Vel totam modi corporis pariatur labore.'
+                        price:
+                          amount: '2121386'
+                          currency: USD
+                          formatted: '$21,213.86'
+                        cover_image: 'https://via.placeholder.com/640x480.png/004400?text=products+Shopify'
+                        created_at: '2023-11-12T11:41:19.000000Z'
+                        updated_at: '2023-11-12T11:41:19.000000Z'
+                      -
+                        id: 10
+                        name: 'Accusamus non dolorem expedita vel.'
+                        description: 'Itaque quia perferendis consequatur est ipsam maiores. Optio doloremque nam quae autem molestiae. Aut voluptas saepe assumenda blanditiis rerum neque quia.'
+                        price:
+                          amount: '20207198'
+                          currency: USD
+                          formatted: '$202,071.98'
+                        cover_image: 'https://via.placeholder.com/640x480.png/000044?text=products+Shopify'
+                        created_at: '2023-11-12T11:41:19.000000Z'
+                        updated_at: '2023-11-12T11:41:19.000000Z'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        name:
+                          type: string
+                          example: 'Recusandae illum iusto.'
+                        description:
+                          type: string
+                          example: 'Quo nisi esse eum delectus tenetur. Vero nostrum ullam eaque autem voluptatem. Eaque temporibus ut minima qui eveniet consequatur.'
+                        price:
+                          type: object
+                          properties:
+                            amount:
+                              type: string
+                              example: '24921235'
+                            currency:
+                              type: string
+                              example: USD
+                            formatted:
+                              type: string
+                              example: '$249,212.35'
+                        cover_image:
+                          type: string
+                          example: 'https://via.placeholder.com/640x480.png/00eebb?text=products+Shopify'
+                        created_at:
+                          type: string
+                          example: '2023-11-12T11:41:19.000000Z'
+                        updated_at:
+                          type: string
+                          example: '2023-11-12T11:41:19.000000Z'
       tags:
         - Products
     post:
@@ -173,7 +484,31 @@ paths:
       operationId: storeANewlyCreatedResourceInStorage
       description: ''
       parameters: []
-      responses: {  }
+      responses:
+        422:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'The cover image field must be a valid URL.'
+                  errors:
+                    cover_image:
+                      - 'The cover image field must be a valid URL.'
+                properties:
+                  message:
+                    type: string
+                    example: 'The cover image field must be a valid URL.'
+                  errors:
+                    type: object
+                    properties:
+                      cover_image:
+                        type: array
+                        example:
+                          - 'The cover image field must be a valid URL.'
+                        items:
+                          type: string
       tags:
         - Products
       requestBody:
@@ -214,18 +549,58 @@ paths:
       description: ''
       parameters: []
       responses:
-        401:
+        200:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: Unauthenticated.
+                  data:
+                    id: 1
+                    name: 'Recusandae illum iusto.'
+                    description: 'Quo nisi esse eum delectus tenetur. Vero nostrum ullam eaque autem voluptatem. Eaque temporibus ut minima qui eveniet consequatur.'
+                    price:
+                      amount: '24921235'
+                      currency: USD
+                      formatted: '$249,212.35'
+                    cover_image: 'https://via.placeholder.com/640x480.png/00eebb?text=products+Shopify'
+                    created_at: '2023-11-12T11:41:19.000000Z'
+                    updated_at: '2023-11-12T11:41:19.000000Z'
                 properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 1
+                      name:
+                        type: string
+                        example: 'Recusandae illum iusto.'
+                      description:
+                        type: string
+                        example: 'Quo nisi esse eum delectus tenetur. Vero nostrum ullam eaque autem voluptatem. Eaque temporibus ut minima qui eveniet consequatur.'
+                      price:
+                        type: object
+                        properties:
+                          amount:
+                            type: string
+                            example: '24921235'
+                          currency:
+                            type: string
+                            example: USD
+                          formatted:
+                            type: string
+                            example: '$249,212.35'
+                      cover_image:
+                        type: string
+                        example: 'https://via.placeholder.com/640x480.png/00eebb?text=products+Shopify'
+                      created_at:
+                        type: string
+                        example: '2023-11-12T11:41:19.000000Z'
+                      updated_at:
+                        type: string
+                        example: '2023-11-12T11:41:19.000000Z'
       tags:
         - Products
     put:
@@ -233,7 +608,59 @@ paths:
       operationId: updateTheSpecifiedResourceInStorage
       description: ''
       parameters: []
-      responses: {  }
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 1
+                    name: 'Product name'
+                    description: 'Product description'
+                    price:
+                      amount: '100'
+                      currency: USD
+                      formatted: $1.00
+                    cover_image: 'https://example.com/image.jpg'
+                    created_at: '2023-11-12T11:41:19.000000Z'
+                    updated_at: '2023-11-12T12:05:32.000000Z'
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 1
+                      name:
+                        type: string
+                        example: 'Product name'
+                      description:
+                        type: string
+                        example: 'Product description'
+                      price:
+                        type: object
+                        properties:
+                          amount:
+                            type: string
+                            example: '100'
+                          currency:
+                            type: string
+                            example: USD
+                          formatted:
+                            type: string
+                            example: $1.00
+                      cover_image:
+                        type: string
+                        example: 'https://example.com/image.jpg'
+                      created_at:
+                        type: string
+                        example: '2023-11-12T11:41:19.000000Z'
+                      updated_at:
+                        type: string
+                        example: '2023-11-12T12:05:32.000000Z'
       tags:
         - Products
       requestBody:
@@ -271,7 +698,9 @@ paths:
       operationId: removeTheSpecifiedResourceFromStorage
       description: ''
       parameters: []
-      responses: {  }
+      responses:
+        204:
+          description: ''
       tags:
         - Products
     parameters:
