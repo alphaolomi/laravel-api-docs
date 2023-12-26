@@ -19,7 +19,7 @@ jobs:
 
     steps:
       - name: Check for stale issues and pull requests
-        uses: actions/stale@v8
+        uses: actions/stale@v9
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           stale-issue-message: |
