@@ -41,7 +41,7 @@ class StoreProductRequest extends FormRequest
             ],
             'cover_image' => [
                 'description' => 'The cover image of the product.',
-                'example' => 'https://example.com/image.jpg',
+                // 'example' => 'https://via.placeholder.com/640x480.png/0066ff?text=Product+cover+image',
             ],
         ];
     }

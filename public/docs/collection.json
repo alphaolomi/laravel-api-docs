@@ -1,0 +1,625 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "http:\/\/localhost:8000"
+        }
+    ],
+    "info": {
+        "name": "Products API",
+        "_postman_id": "fdd8d5eb-7e50-49c9-bd81-c2ff96434930",
+        "description": "This is a sample API for a products catalog.",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Authentication",
+            "description": "APIs for authentication",
+            "item": [
+                {
+                    "name": "Login the user",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/login",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"email\":\"user@example.com\",\"password\":\"password\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"access_token\":\"1|0M0VCKSJam4zQU058p3ZJ4GXCiDCWYkCyJflPegA\",\"user\":{\"id\":1,\"name\":\"John Doe\",\"email\":\"johndoe@example.com\"}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Register a user",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/register",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/register"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"John Doe\",\"email\":\"user@example.com\",\"password\":\"password\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "59"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 422,
+                            "body": "{\"message\":\"The email has already been taken.\",\"errors\":{\"email\":[\"The email has already been taken.\"]}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Logout the user",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/logout",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/logout"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "57"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 204,
+                            "body": "",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "GET api\/user",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/user"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "59"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"id\":2,\"name\":\"John Doe\",\"email\":\"user@example.com\",\"email_verified_at\":null,\"created_at\":\"2023-11-12T12:04:40.000000Z\",\"updated_at\":\"2023-11-12T12:04:40.000000Z\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Health Checks",
+            "description": "APIs for health checks",
+            "item": [
+                {
+                    "name": "GET api\/health-check",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/health-check",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/health-check"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "58"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"status\":\"up\",\"services\":{\"database\":\"up\",\"redis\":\"up\"}}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Products",
+            "description": "APIs for products",
+            "item": [
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "56"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"data\":[{\"id\":1,\"name\":\"Recusandae illum iusto.\",\"description\":\"Quo nisi esse eum delectus tenetur. Vero nostrum ullam eaque autem voluptatem. Eaque temporibus ut minima qui eveniet consequatur.\",\"price\":{\"amount\":\"24921235\",\"currency\":\"USD\",\"formatted\":\"$249,212.35\"},\"cover_image\":\"https:\\\/\\\/via.placeholder.com\\\/640x480.png\\\/00eebb?text=products+Shopify\",\"created_at\":\"2023-11-12T11:41:19.000000Z\",\"updated_at\":\"2023-11-12T11:41:19.000000Z\"},{\"id\":2,\"name\":\"Aut consequatur eum aspernatur.\",\"description\":\"Quis voluptatem quidem nostrum laudantium. Molestiae rerum velit consequatur dolorem similique molestiae dignissimos. Suscipit et corrupti odit expedita. Eum voluptatum est atque inventore beatae voluptatem. Quas autem voluptatem occaecati. In rerum distinctio expedita rerum quis autem.\",\"price\":{\"amount\":\"21405259\",\"currency\":\"USD\",\"formatted\":\"$214,052.59\"},\"cover_image\":\"https:\\\/\\\/via.placeholder.com\\\/640x480.png\\\/00aa66?text=products+Shopify\",\"created_at\":\"2023-11-12T11:41:19.000000Z\",\"updated_at\":\"2023-11-12T11:41:19.000000Z\"},{\"id\":3,\"name\":\"Qui voluptatum libero.\",\"description\":\"Nihil est et necessitatibus aut. Eos quaerat ratione et atque consectetur. Doloremque voluptate nihil alias nam neque. Tempora repudiandae voluptate consequatur iusto sit et dolor. Et velit eligendi dolorem quam. Minima ratione a aliquam tempore.\",\"price\":{\"amount\":\"19768850\",\"currency\":\"USD\",\"formatted\":\"$197,688.50\"},\"cover_image\":\"https:\\\/\\\/via.placeholder.com\\\/640x480.png\\\/002255?text=products+Shopify\",\"created_at\":\"2023-11-12T11:41:19.000000Z\",\"updated_at\":\"2023-11-12T11:41:19.000000Z\"},{\"id\":4,\"name\":\"Sed autem et corrupti.\",\"description\":\"Praesentium quia recusandae vel nihil impedit. Quis perferendis facilis ipsam. Explicabo exercitationem omnis atque et facilis dolorem aut minus. Aut ex vel aliquam cum. Eos sunt sunt et repellat ut facere. Ad repellat sapiente ut.\",\"price\":{\"amount\":\"2830961\",\"currency\":\"USD\",\"formatted\":\"$28,309.61\"},\"cover_image\":\"https:\\\/\\\/via.placeholder.com\\\/640x480.png\\\/008877?text=products+Shopify\",\"created_at\":\"2023-11-12T11:41:19.000000Z\",\"updated_at\":\"2023-11-12T11:41:19.000000Z\"},{\"id\":5,\"name\":\"Aut aut enim.\",\"description\":\"Dolore illum repellendus rerum doloribus doloribus explicabo. Magni at voluptatem dolores architecto. Ea voluptatem dolorem deserunt culpa eos vel. Laborum suscipit dicta voluptatem enim impedit totam quas.\",\"price\":{\"amount\":\"8516908\",\"currency\":\"USD\",\"formatted\":\"$85,169.08\"},\"cover_image\":\"https:\\\/\\\/via.placeholder.com\\\/640x480.png\\\/00bbaa?text=products+Shopify\",\"created_at\":\"2023-11-12T11:41:19.000000Z\",\"updated_at\":\"2023-11-12T11:41:19.000000Z\"},{\"id\":6,\"name\":\"Et tenetur temporibus et.\",\"description\":\"Quo nesciunt impedit sit totam. Minima reprehenderit et quia praesentium quos. Accusamus aut architecto molestiae doloribus atque recusandae sed. Vel molestiae hic laboriosam fuga vero quia corrupti consequatur. Facere nisi quos sunt in id provident qui. Nam aspernatur aliquid tempora ab laboriosam.\",\"price\":{\"amount\":\"4175922\",\"currency\":\"USD\",\"formatted\":\"$41,759.22\"},\"cover_image\":\"https:\\\/\\\/via.placeholder.com\\\/640x480.png\\\/00dd33?text=products+Shopify\",\"created_at\":\"2023-11-12T11:41:19.000000Z\",\"updated_at\":\"2023-11-12T11:41:19.000000Z\"},{\"id\":7,\"name\":\"Debitis reiciendis doloribus.\",\"description\":\"Eos facere saepe doloremque. Molestiae rerum soluta autem ad beatae ea architecto. Modi delectus rem veniam nisi nostrum dolor eveniet. Consectetur ab ut voluptas nesciunt omnis fuga distinctio. Sit architecto fugiat doloremque voluptatem facere ut adipisci.\",\"price\":{\"amount\":\"11859183\",\"currency\":\"USD\",\"formatted\":\"$118,591.83\"},\"cover_image\":\"https:\\\/\\\/via.placeholder.com\\\/640x480.png\\\/00ee77?text=products+Shopify\",\"created_at\":\"2023-11-12T11:41:19.000000Z\",\"updated_at\":\"2023-11-12T11:41:19.000000Z\"},{\"id\":8,\"name\":\"Ea quaerat repellendus.\",\"description\":\"Ducimus perferendis eveniet error doloremque omnis tempora consectetur. Eum minima nihil et. Necessitatibus et nisi voluptatem velit. Ipsa mollitia blanditiis cumque aperiam est.\",\"price\":{\"amount\":\"18366881\",\"currency\":\"USD\",\"formatted\":\"$183,668.81\"},\"cover_image\":\"https:\\\/\\\/via.placeholder.com\\\/640x480.png\\\/00bb00?text=products+Shopify\",\"created_at\":\"2023-11-12T11:41:19.000000Z\",\"updated_at\":\"2023-11-12T11:41:19.000000Z\"},{\"id\":9,\"name\":\"Hic autem.\",\"description\":\"Quis cumque quo fuga et dolores voluptatem cumque. Facere vel dolores est necessitatibus est. Ipsam odio explicabo vel ipsum vel. Qui quam est facere quis. Suscipit reiciendis velit molestiae. Vel totam modi corporis pariatur labore.\",\"price\":{\"amount\":\"2121386\",\"currency\":\"USD\",\"formatted\":\"$21,213.86\"},\"cover_image\":\"https:\\\/\\\/via.placeholder.com\\\/640x480.png\\\/004400?text=products+Shopify\",\"created_at\":\"2023-11-12T11:41:19.000000Z\",\"updated_at\":\"2023-11-12T11:41:19.000000Z\"},{\"id\":10,\"name\":\"Accusamus non dolorem expedita vel.\",\"description\":\"Itaque quia perferendis consequatur est ipsam maiores. Optio doloremque nam quae autem molestiae. Aut voluptas saepe assumenda blanditiis rerum neque quia.\",\"price\":{\"amount\":\"20207198\",\"currency\":\"USD\",\"formatted\":\"$202,071.98\"},\"cover_image\":\"https:\\\/\\\/via.placeholder.com\\\/640x480.png\\\/000044?text=products+Shopify\",\"created_at\":\"2023-11-12T11:41:19.000000Z\",\"updated_at\":\"2023-11-12T11:41:19.000000Z\"}]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "name",
+                                    "value": "Product name",
+                                    "type": "text",
+                                    "description": "The name of the product. Must not be greater than 255 characters."
+                                },
+                                {
+                                    "key": "description",
+                                    "value": "Product description",
+                                    "type": "text",
+                                    "description": "The description of the product."
+                                },
+                                {
+                                    "key": "price",
+                                    "value": 100,
+                                    "type": "text",
+                                    "description": "The price of the product."
+                                },
+                                {
+                                    "key": "is_active",
+                                    "value": false,
+                                    "type": "text",
+                                    "description": "The status of the product."
+                                },
+                                {
+                                    "key": "cover_image",
+                                    "src": [],
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "55"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 422,
+                            "body": "{\"message\":\"The cover image field must be a valid URL.\",\"errors\":{\"cover_image\":[\"The cover image field must be a valid URL.\"]}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the product."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "54"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"data\":{\"id\":1,\"name\":\"Recusandae illum iusto.\",\"description\":\"Quo nisi esse eum delectus tenetur. Vero nostrum ullam eaque autem voluptatem. Eaque temporibus ut minima qui eveniet consequatur.\",\"price\":{\"amount\":\"24921235\",\"currency\":\"USD\",\"formatted\":\"$249,212.35\"},\"cover_image\":\"https:\\\/\\\/via.placeholder.com\\\/640x480.png\\\/00eebb?text=products+Shopify\",\"created_at\":\"2023-11-12T11:41:19.000000Z\",\"updated_at\":\"2023-11-12T11:41:19.000000Z\"}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the product."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"Product name\",\"description\":\"Product description\",\"price\":100,\"is_active\":false,\"cover_image\":\"https:\\\/\\\/example.com\\\/image.jpg\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "53"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"data\":{\"id\":1,\"name\":\"Product name\",\"description\":\"Product description\",\"price\":{\"amount\":\"100\",\"currency\":\"USD\",\"formatted\":\"$1.00\"},\"cover_image\":\"https:\\\/\\\/example.com\\\/image.jpg\",\"created_at\":\"2023-11-12T11:41:19.000000Z\",\"updated_at\":\"2023-11-12T12:05:32.000000Z\"}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the product."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "52"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 204,
+                            "body": "",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "bearer",
+        "bearer": [
+            {
+                "key": "Authorization",
+                "type": "string"
+            }
+        ]
+    }
+}
