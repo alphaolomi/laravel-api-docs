@@ -8816,16 +8816,16 @@
         },
         {
             "name": "nunomaduro/larastan",
-            "version": "v2.8.1",
+            "version": "v2.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/larastan/larastan.git",
-                "reference": "b7cc6a29c457a7d4f3de90466392ae9ad3e17022"
+                "reference": "467113c58d110ad617cf9e07ff49b0948d1c03cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/larastan/larastan/zipball/b7cc6a29c457a7d4f3de90466392ae9ad3e17022",
-                "reference": "b7cc6a29c457a7d4f3de90466392ae9ad3e17022",
+                "url": "https://api.github.com/repos/larastan/larastan/zipball/467113c58d110ad617cf9e07ff49b0948d1c03cc",
+                "reference": "467113c58d110ad617cf9e07ff49b0948d1c03cc",
                 "shasum": ""
             },
             "require": {
@@ -8893,7 +8893,7 @@
             ],
             "support": {
                 "issues": "https://github.com/larastan/larastan/issues",
-                "source": "https://github.com/larastan/larastan/tree/v2.8.1"
+                "source": "https://github.com/larastan/larastan/tree/v2.9.1"
             },
             "funding": [
                 {
@@ -8914,7 +8914,7 @@
                 }
             ],
             "abandoned": "larastan/larastan",
-            "time": "2024-01-08T09:11:17+00:00"
+            "time": "2024-02-26T14:10:20+00:00"
         },
         {
             "name": "pestphp/pest",
@@ -9520,16 +9520,16 @@
         },
         {
             "name": "phpmyadmin/sql-parser",
-            "version": "5.8.2",
+            "version": "5.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpmyadmin/sql-parser.git",
-                "reference": "f1720ae19abe6294cb5599594a8a57bc3c8cc287"
+                "reference": "011fa18a4e55591fac6545a821921dd1d61c6984"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpmyadmin/sql-parser/zipball/f1720ae19abe6294cb5599594a8a57bc3c8cc287",
-                "reference": "f1720ae19abe6294cb5599594a8a57bc3c8cc287",
+                "url": "https://api.github.com/repos/phpmyadmin/sql-parser/zipball/011fa18a4e55591fac6545a821921dd1d61c6984",
+                "reference": "011fa18a4e55591fac6545a821921dd1d61c6984",
                 "shasum": ""
             },
             "require": {
@@ -9560,6 +9560,7 @@
             "bin": [
                 "bin/highlight-query",
                 "bin/lint-query",
+                "bin/sql-parser",
                 "bin/tokenize-query"
             ],
             "type": "library",
@@ -9603,7 +9604,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2023-09-19T12:34:29+00:00"
+            "time": "2024-01-20T20:34:02+00:00"
         },
         {
             "name": "phpstan/phpdoc-parser",
@@ -9654,16 +9655,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.10.56",
+            "version": "1.10.59",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "27816a01aea996191ee14d010f325434c0ee76fa"
+                "reference": "e607609388d3a6d418a50a49f7940e8086798281"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/27816a01aea996191ee14d010f325434c0ee76fa",
-                "reference": "27816a01aea996191ee14d010f325434c0ee76fa",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/e607609388d3a6d418a50a49f7940e8086798281",
+                "reference": "e607609388d3a6d418a50a49f7940e8086798281",
                 "shasum": ""
             },
             "require": {
@@ -9712,7 +9713,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-01-15T10:43:00+00:00"
+            "time": "2024-02-20T13:59:13+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
