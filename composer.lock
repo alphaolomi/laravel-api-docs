@@ -1384,16 +1384,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v10.48.17",
+            "version": "v10.48.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "60f3c8f667b24a09e0392e26b1f40fb9067cdc3c"
+                "reference": "be2be342d4c74db6a8d2bd18469cd6d488ab9c98"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/60f3c8f667b24a09e0392e26b1f40fb9067cdc3c",
-                "reference": "60f3c8f667b24a09e0392e26b1f40fb9067cdc3c",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/be2be342d4c74db6a8d2bd18469cd6d488ab9c98",
+                "reference": "be2be342d4c74db6a8d2bd18469cd6d488ab9c98",
                 "shasum": ""
             },
             "require": {
@@ -1587,20 +1587,20 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2024-07-23T16:06:06+00:00"
+            "time": "2024-08-09T07:55:45+00:00"
         },
         {
             "name": "laravel/octane",
-            "version": "v2.5.2",
+            "version": "v2.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/octane.git",
-                "reference": "ba9b7fffc3551eb8ba6d9e708866463e42f27511"
+                "reference": "2b5b4d08982cb33a692d467ca96c5bb2f0fcd9ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/octane/zipball/ba9b7fffc3551eb8ba6d9e708866463e42f27511",
-                "reference": "ba9b7fffc3551eb8ba6d9e708866463e42f27511",
+                "url": "https://api.github.com/repos/laravel/octane/zipball/2b5b4d08982cb33a692d467ca96c5bb2f0fcd9ae",
+                "reference": "2b5b4d08982cb33a692d467ca96c5bb2f0fcd9ae",
                 "shasum": ""
             },
             "require": {
@@ -1677,7 +1677,7 @@
                 "issues": "https://github.com/laravel/octane/issues",
                 "source": "https://github.com/laravel/octane"
             },
-            "time": "2024-07-08T14:44:19+00:00"
+            "time": "2024-08-05T13:53:57+00:00"
         },
         {
             "name": "laravel/prompts",
@@ -1805,26 +1805,27 @@
         },
         {
             "name": "laravel/serializable-closure",
-            "version": "v1.3.3",
+            "version": "v1.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/serializable-closure.git",
-                "reference": "3dbf8a8e914634c48d389c1234552666b3d43754"
+                "reference": "61b87392d986dc49ad5ef64e75b1ff5fee24ef81"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/serializable-closure/zipball/3dbf8a8e914634c48d389c1234552666b3d43754",
-                "reference": "3dbf8a8e914634c48d389c1234552666b3d43754",
+                "url": "https://api.github.com/repos/laravel/serializable-closure/zipball/61b87392d986dc49ad5ef64e75b1ff5fee24ef81",
+                "reference": "61b87392d986dc49ad5ef64e75b1ff5fee24ef81",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.3|^8.0"
             },
             "require-dev": {
-                "nesbot/carbon": "^2.61",
+                "illuminate/support": "^8.0|^9.0|^10.0|^11.0",
+                "nesbot/carbon": "^2.61|^3.0",
                 "pestphp/pest": "^1.21.3",
                 "phpstan/phpstan": "^1.8.2",
-                "symfony/var-dumper": "^5.4.11"
+                "symfony/var-dumper": "^5.4.11|^6.2.0|^7.0.0"
             },
             "type": "library",
             "extra": {
@@ -1861,7 +1862,7 @@
                 "issues": "https://github.com/laravel/serializable-closure/issues",
                 "source": "https://github.com/laravel/serializable-closure"
             },
-            "time": "2023-11-08T14:08:06+00:00"
+            "time": "2024-08-02T07:48:17+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -2666,20 +2667,20 @@
         },
         {
             "name": "nette/utils",
-            "version": "v4.0.4",
+            "version": "v4.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/utils.git",
-                "reference": "d3ad0aa3b9f934602cb3e3902ebccf10be34d218"
+                "reference": "736c567e257dbe0fcf6ce81b4d6dbe05c6899f96"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/utils/zipball/d3ad0aa3b9f934602cb3e3902ebccf10be34d218",
-                "reference": "d3ad0aa3b9f934602cb3e3902ebccf10be34d218",
+                "url": "https://api.github.com/repos/nette/utils/zipball/736c567e257dbe0fcf6ce81b4d6dbe05c6899f96",
+                "reference": "736c567e257dbe0fcf6ce81b4d6dbe05c6899f96",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0 <8.4"
+                "php": "8.0 - 8.4"
             },
             "conflict": {
                 "nette/finder": "<3",
@@ -2746,9 +2747,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/utils/issues",
-                "source": "https://github.com/nette/utils/tree/v4.0.4"
+                "source": "https://github.com/nette/utils/tree/v4.0.5"
             },
-            "time": "2024-01-17T16:50:36+00:00"
+            "time": "2024-08-07T15:39:19+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -6281,16 +6282,16 @@
         },
         {
             "name": "symfony/psr-http-message-bridge",
-            "version": "v6.4.8",
+            "version": "v6.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/psr-http-message-bridge.git",
-                "reference": "23a162bd446b93948a2c2f6909d80ad06195be10"
+                "reference": "89a24648d73e4eee30893b0da16abc454a65c53b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/psr-http-message-bridge/zipball/23a162bd446b93948a2c2f6909d80ad06195be10",
-                "reference": "23a162bd446b93948a2c2f6909d80ad06195be10",
+                "url": "https://api.github.com/repos/symfony/psr-http-message-bridge/zipball/89a24648d73e4eee30893b0da16abc454a65c53b",
+                "reference": "89a24648d73e4eee30893b0da16abc454a65c53b",
                 "shasum": ""
             },
             "require": {
@@ -6344,7 +6345,7 @@
                 "psr-7"
             ],
             "support": {
-                "source": "https://github.com/symfony/psr-http-message-bridge/tree/v6.4.8"
+                "source": "https://github.com/symfony/psr-http-message-bridge/tree/v6.4.10"
             },
             "funding": [
                 {
@@ -6360,7 +6361,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-05-31T14:51:39+00:00"
+            "time": "2024-07-15T09:36:38+00:00"
         },
         {
             "name": "symfony/routing",
