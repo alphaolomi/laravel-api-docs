@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5670e0aa4316dc137e83c82648b675ca",
+    "content-hash": "c2c2dc7e91667314cff4b144373e8017",
     "packages": [
         {
             "name": "brick/math",
@@ -137,32 +137,31 @@
         },
         {
             "name": "cknow/laravel-money",
-            "version": "v7.2.0",
+            "version": "v8.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cknow/laravel-money.git",
-                "reference": "d54ebc59342ed2a68647cc878444ef48af9f21ef"
+                "reference": "fdca65e8ce9a3be4d81c828ebebc671fa1cc7440"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cknow/laravel-money/zipball/d54ebc59342ed2a68647cc878444ef48af9f21ef",
-                "reference": "d54ebc59342ed2a68647cc878444ef48af9f21ef",
+                "url": "https://api.github.com/repos/cknow/laravel-money/zipball/fdca65e8ce9a3be4d81c828ebebc671fa1cc7440",
+                "reference": "fdca65e8ce9a3be4d81c828ebebc671fa1cc7440",
                 "shasum": ""
             },
             "require": {
                 "ext-intl": "*",
                 "ext-json": "*",
-                "illuminate/support": "^7.0|^8.0|^9.0|^10.0",
-                "illuminate/view": "^7.0|^8.0|^9.0|^10.0",
-                "moneyphp/money": "^3.3|^4.2",
-                "php": "^7.3|^8.0"
+                "illuminate/support": "^9.0|^10.0|^11.0",
+                "illuminate/view": "^9.0|^10.0|^11.0",
+                "moneyphp/money": "^4.6",
+                "php": "^8.1"
             },
             "require-dev": {
-                "graham-campbell/testbench": "^5.7",
-                "illuminate/filesystem": "^7.0|^8.0|^9.0|^10.0",
+                "graham-campbell/testbench": "^6.1",
+                "illuminate/filesystem": "^9.0|^10.0|^11.0",
                 "mockery/mockery": "^1.6",
-                "phpunit/phpunit": "^8.5|^9.5.10|^10.0",
-                "spatie/phpunit-watcher": "^1.23"
+                "phpunit/phpunit": "^10.5"
             },
             "type": "library",
             "extra": {
@@ -199,9 +198,9 @@
             ],
             "support": {
                 "issues": "https://github.com/cknow/laravel-money/issues",
-                "source": "https://github.com/cknow/laravel-money/tree/v7.2.0"
+                "source": "https://github.com/cknow/laravel-money/tree/v8.3.1"
             },
-            "time": "2023-08-18T11:13:55+00:00"
+            "time": "2025-01-03T13:25:38+00:00"
         },
         {
             "name": "composer/semver",
@@ -2316,42 +2315,41 @@
         },
         {
             "name": "moneyphp/money",
-            "version": "v4.2.0",
+            "version": "v4.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/moneyphp/money.git",
-                "reference": "f660ab7f1d7a4c2ffdd30f50c55ed2c95c26fc3f"
+                "reference": "ddf6a86b574808f8844777ed4e8c4f92a10dac9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/moneyphp/money/zipball/f660ab7f1d7a4c2ffdd30f50c55ed2c95c26fc3f",
-                "reference": "f660ab7f1d7a4c2ffdd30f50c55ed2c95c26fc3f",
+                "url": "https://api.github.com/repos/moneyphp/money/zipball/ddf6a86b574808f8844777ed4e8c4f92a10dac9b",
+                "reference": "ddf6a86b574808f8844777ed4e8c4f92a10dac9b",
                 "shasum": ""
             },
             "require": {
                 "ext-bcmath": "*",
                 "ext-filter": "*",
                 "ext-json": "*",
-                "php": "~8.0.0 || ~8.1.0 || ~8.2.0"
+                "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0"
             },
             "require-dev": {
                 "cache/taggable-cache": "^1.1.0",
-                "doctrine/coding-standard": "^9.0",
-                "doctrine/instantiator": "^1.4.0",
+                "doctrine/coding-standard": "^12.0",
+                "doctrine/instantiator": "^1.5.0 || ^2.0",
                 "ext-gmp": "*",
                 "ext-intl": "*",
-                "florianv/exchanger": "^2.6.3",
+                "florianv/exchanger": "^2.8.1",
                 "florianv/swap": "^4.3.0",
-                "moneyphp/crypto-currencies": "^1.0.0",
-                "moneyphp/iso-currencies": "^3.2.1",
-                "php-http/message": "^1.11.0",
-                "php-http/mock-client": "^1.4.1",
+                "moneyphp/crypto-currencies": "^1.1.0",
+                "moneyphp/iso-currencies": "^3.4",
+                "php-http/message": "^1.16.0",
+                "php-http/mock-client": "^1.6.0",
                 "phpbench/phpbench": "^1.2.5",
-                "phpspec/phpspec": "^7.3",
-                "phpunit/phpunit": "^9.5.4",
+                "phpunit/phpunit": "^10.5.9",
                 "psalm/plugin-phpunit": "^0.18.4",
-                "psr/cache": "^1.0.1",
-                "vimeo/psalm": "~5.3.0"
+                "psr/cache": "^1.0.1 || ^2.0 || ^3.0",
+                "vimeo/psalm": "~5.20.0"
             },
             "suggest": {
                 "ext-gmp": "Calculate without integer limits",
@@ -2399,9 +2397,9 @@
             ],
             "support": {
                 "issues": "https://github.com/moneyphp/money/issues",
-                "source": "https://github.com/moneyphp/money/tree/v4.2.0"
+                "source": "https://github.com/moneyphp/money/tree/v4.6.0"
             },
-            "time": "2023-08-16T14:31:24+00:00"
+            "time": "2024-11-22T10:59:03+00:00"
         },
         {
             "name": "monolog/monolog",
