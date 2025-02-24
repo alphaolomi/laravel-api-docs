@@ -1598,21 +1598,21 @@
         },
         {
             "name": "laravel/octane",
-            "version": "v2.7.0",
+            "version": "v2.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/octane.git",
-                "reference": "c9580d430fa8459823bd1dfbcb2bcfd591548cec"
+                "reference": "951023e3c0ee8934d9f8338fd6495a0a969eefc4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/octane/zipball/c9580d430fa8459823bd1dfbcb2bcfd591548cec",
-                "reference": "c9580d430fa8459823bd1dfbcb2bcfd591548cec",
+                "url": "https://api.github.com/repos/laravel/octane/zipball/951023e3c0ee8934d9f8338fd6495a0a969eefc4",
+                "reference": "951023e3c0ee8934d9f8338fd6495a0a969eefc4",
                 "shasum": ""
             },
             "require": {
                 "laminas/laminas-diactoros": "^3.0",
-                "laravel/framework": "^10.10.1|^11.0",
+                "laravel/framework": "^10.10.1|^11.0|^12.0",
                 "laravel/prompts": "^0.1.24|^0.2.0|^0.3.0",
                 "laravel/serializable-closure": "^1.3|^2.0",
                 "nesbot/carbon": "^2.66.0|^3.0",
@@ -1633,9 +1633,9 @@
                 "livewire/livewire": "^2.12.3|^3.0",
                 "mockery/mockery": "^1.5.1",
                 "nunomaduro/collision": "^6.4.0|^7.5.2|^8.0",
-                "orchestra/testbench": "^8.21|^9.0",
+                "orchestra/testbench": "^8.21|^9.0|^10.0",
                 "phpstan/phpstan": "^1.10.15",
-                "phpunit/phpunit": "^10.4",
+                "phpunit/phpunit": "^10.4|^11.5",
                 "spiral/roadrunner-cli": "^2.6.0",
                 "spiral/roadrunner-http": "^3.3.0"
             },
@@ -1684,7 +1684,7 @@
                 "issues": "https://github.com/laravel/octane/issues",
                 "source": "https://github.com/laravel/octane"
             },
-            "time": "2025-02-11T15:04:38+00:00"
+            "time": "2025-02-19T20:28:29+00:00"
         },
         {
             "name": "laravel/prompts",
