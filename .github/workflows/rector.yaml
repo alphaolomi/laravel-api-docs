@@ -33,7 +33,7 @@ jobs:
       - run: vendor/bin/rector --ansi
 
       # If pull request, commit changes
-      - uses: stefanzweifel/git-auto-commit-action@v5
+      - uses: stefanzweifel/git-auto-commit-action@v7
         if: github.event_name == 'pull_request'
         with:
           commit_message: "[rector] Rector fixes"
