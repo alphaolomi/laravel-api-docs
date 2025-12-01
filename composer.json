@@ -22,7 +22,7 @@
         "barryvdh/laravel-ide-helper": "^3.0",
         "driftingly/rector-laravel": "^0.29.0",
         "fakerphp/faker": "^1.9.1",
-        "knuckleswtf/scribe": "^4.18",
+        "knuckleswtf/scribe": "^5.6",
         "laravel/pint": "^1.0",
         "laravel/sail": "^1.22",
         "nunomaduro/larastan": "^2.0.1",
